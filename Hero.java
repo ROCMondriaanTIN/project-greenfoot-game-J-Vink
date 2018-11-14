@@ -13,6 +13,7 @@ public class Hero extends Mover {
     protected static int karakter;
     public String wereld = "Wereld_1";
     protected static int munten;
+    protected static int levens = 2;
 
     public Hero() {
         super();
@@ -35,6 +36,7 @@ public class Hero extends Mover {
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
+                levens--;
                 Greenfoot.setWorld(new Wereld_1());
                 break;
             }
