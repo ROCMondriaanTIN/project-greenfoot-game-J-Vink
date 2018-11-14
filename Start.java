@@ -21,7 +21,7 @@ public class Start extends Actor
     }
     private void click(){
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new Wereld_1());
+            Greenfoot.setWorld(new Transitiescherm());
         }
     }
 }

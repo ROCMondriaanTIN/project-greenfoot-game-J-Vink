@@ -10,15 +10,16 @@ public class Hero extends Mover {
     private final double acc;
     private final double drag;
     private boolean jumping;
-    public byte karakter = 1;
+    protected static int karakter;
     public String wereld = "Wereld_1";
+    protected static int munten;
 
     public Hero() {
         super();
-        gravity = 9.8;
-        acc = 0.6;
+        gravity = 19.8;
+        acc = 0.9;
         drag = 0.8;
-        setImage("p" + karakter+ ".png");
+        setImage("p" + karakter + ".png");
     }
 
     @Override
@@ -34,7 +35,7 @@ public class Hero extends Mover {
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                Greenfoot.setWorld(new wereld);
+                Greenfoot.setWorld(new Wereld_1());
                 break;
             }
         }
@@ -47,7 +48,7 @@ public class Hero extends Mover {
     
     public void handleInput() {
         if ((Greenfoot.isKeyDown("space")) && (opGrond() == true)) {
-            velocityY = -30;
+            velocityY = -15;
         }
 
         if (Greenfoot.isKeyDown("left")) {
@@ -58,10 +59,10 @@ public class Hero extends Mover {
     }
 
     public int getWidth() {
-        return getImage().getWidth();
+        return 17;
     }
 
     public int getHeight() {
-        return getImage().getHeight();
+        return 17;
     }
 }
