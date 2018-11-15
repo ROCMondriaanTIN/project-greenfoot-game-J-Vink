@@ -100,6 +100,7 @@ public class Wereld_1 extends World {
         // Collectables
         addObject(new ZilverenMunt(), 144, 1274);
         addObject(new GoudenMunt(), 200, 1274);
+        addObject(new Diamant(), 1200, 2100);
         
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.

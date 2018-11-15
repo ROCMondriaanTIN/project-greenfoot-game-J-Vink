@@ -12,7 +12,7 @@ public class Diamant extends Collectable
 
     public Diamant() {
         super();
-        setImage("Diamond.png");
+        setImage("Diamond" + Greenfoot.getRandomNumber(3) + ".png");
         Collectable.colNr++;
     }
 
