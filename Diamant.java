@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class Diamant here.
  * 
@@ -9,23 +8,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Diamant extends Collectable
 {
     public boolean opgepakt;
-
-    public Diamant() {
-        super();
+    public int diaX;
+    public int diaY;
+    public int id;
+    public Diamant(){
         setImage("Diamond" + Greenfoot.getRandomNumber(3) + ".png");
-        Collectable.colNr++;
+    }
+    public Diamant(int x, int y) {
+        super();
+        this.opgepakt = false;
+        this.diaX = x;
+        this.diaY = y;
     }
 
     @Override
     public void act() {
         applyVelocity();
         
-        
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
                 Hero.diamanten++;
-                this.opgepakt = true;
                 getWorld().removeObject(this);
+                this.opgepakt = true;
+                Collectable.wereld1.remove(id);
                 break;
             }
         }

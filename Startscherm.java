@@ -21,6 +21,16 @@ public class Startscherm extends World
         Hero.levens = 2;
         Start start = new Start();
         addObject(start, 500, 650);
+        voegObjectenToe();
+    }
+    
+    void voegObjectenToe(){
+        Diamant diamant1 = new Diamant(1200, 2100);
+        Collectable.wereld1.add(diamant1);
+        Diamant diamant2 = new Diamant(1200, 2000);
+        Collectable.wereld1.add(diamant2);
+        Diamant diamant3 = new Diamant(1200, 1900);
+        Collectable.wereld1.add(diamant3);
     }
     
     

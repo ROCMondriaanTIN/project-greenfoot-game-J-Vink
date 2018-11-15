@@ -11,10 +11,11 @@ public class Hero extends Mover {
     private final double drag;
     private boolean jumping;
     protected static int karakter;
-    public String wereld = "Wereld_1";
+    public static int wereld = 1;
     protected static int munten;
     protected static int diamanten;
     public static int levens;
+    public static int sleutels;
 
     public Hero() {
         super();

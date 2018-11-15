@@ -1,12 +1,13 @@
 
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 /**
  *
  * @author R. Springer
  */
 public class Wereld_1 extends World {
-
+    public static ArrayList<Collectable> collectables = new ArrayList<Collectable>();
     private CollisionEngine ce;
     
     /**
@@ -100,7 +101,7 @@ public class Wereld_1 extends World {
         // Collectables
         addObject(new ZilverenMunt(), 144, 1274);
         addObject(new GoudenMunt(), 200, 1274);
-        addObject(new Diamant(), 1200, 2100);
+        voegCollectablesToe();
         
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
@@ -110,11 +111,10 @@ public class Wereld_1 extends World {
         ce.addCollidingMover(hero);
     }
     
-    public final void voegCollectablesToe(){
-        
-        // Collectables
-        addObject(new ZilverenMunt(), 144, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
+    public void voegCollectablesToe(){
+        for(int i = 0; i < Collectable.wereld1.size() && Collectable.wereld1.get(i).opgepakt == false; i++){
+                addObject(new Diamant(), Collectable.wereld1.get(i).diaX, Collectable.wereld1.get(i).diaY);
+        }
     }
         
     @Override
