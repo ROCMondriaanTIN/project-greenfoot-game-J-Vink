@@ -13,7 +13,8 @@ public class Hero extends Mover {
     protected static int karakter;
     public String wereld = "Wereld_1";
     protected static int munten;
-    protected static int levens = 2;
+    protected static int diamanten;
+    public static int levens;
 
     public Hero() {
         super();
@@ -43,7 +44,7 @@ public class Hero extends Mover {
         }
          
         // Check of de speler nog levens over heeft.
-        if(levens < 0){
+        if(levens < 1){
             Greenfoot.setWorld(new GameOver());
         }
     }

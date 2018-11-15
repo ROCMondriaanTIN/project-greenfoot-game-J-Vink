@@ -1,16 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ZilverenMunt here.
+ * Write a description of class Diamant here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ZilverenMunt extends Collectable
+public class Diamant extends Collectable
 {
-    public ZilverenMunt() {
+    public boolean opgepakt;
+
+    public Diamant() {
         super();
-        setImage("coinSilver.png");
+        setImage("Diamond.png");
         Collectable.colNr++;
     }
 
@@ -18,9 +20,11 @@ public class ZilverenMunt extends Collectable
     public void act() {
         applyVelocity();
         
+        
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
-                Hero.munten++;
+                Hero.diamanten++;
+                this.opgepakt = true;
                 getWorld().removeObject(this);
                 break;
             }
