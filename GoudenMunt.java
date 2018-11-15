@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ZilverenMunt here.
+ * Write a description of class GoudenMunt here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ZilverenMunt extends Collectable
+public class GoudenMunt extends Collectable
 {
 
     private int walkRange;
@@ -15,9 +15,9 @@ public class ZilverenMunt extends Collectable
     private boolean firstAct;
     private int speed;
 
-    public ZilverenMunt() {
+    public GoudenMunt() {
         super();
-        setImage("coinSilver.png");
+        setImage("coinGold.png");
     }
 
     @Override
@@ -34,10 +34,10 @@ public class ZilverenMunt extends Collectable
         
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
-                Hero.munten++;
+                Hero.munten+=2;
                 getWorld().removeObject(this);
                 break;
             }
         }
-    }
+    }   
 }

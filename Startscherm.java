@@ -15,7 +15,7 @@ public class Startscherm extends World
      */
     public Startscherm()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 1000*800 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1); 
         this.setBackground("bg.png");
         Start start = new Start();

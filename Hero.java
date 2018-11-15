@@ -41,6 +41,11 @@ public class Hero extends Mover {
                 break;
             }
         }
+         
+        // Check of de speler nog levens over heeft.
+        if(levens < 0){
+            Greenfoot.setWorld(new GameOver());
+        }
     }
     
     boolean opGrond(){

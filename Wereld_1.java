@@ -72,7 +72,6 @@ public class Wereld_1 extends World {
         
         //HUD interface.
         //Heart
-
         for(int i = 0; i < Hero.levens; i++){
             addObject(new Heart(),(50+(60*i)), 50);
         }
@@ -94,6 +93,8 @@ public class Wereld_1 extends World {
         addObject(hero, 300, 200);
         addObject(new Enemy(), 1170, 410);
         addObject(new Enemy(), 404, 2174);
+        addObject(new ZilverenMunt(), 144, 1274);
+        addObject(new GoudenMunt(), 150, 1274);
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
         // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
