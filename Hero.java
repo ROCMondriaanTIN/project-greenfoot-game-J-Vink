@@ -38,7 +38,21 @@ public class Hero extends Mover {
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 levens--;
+            switch(wereld){
+                case 1:
                 Greenfoot.setWorld(new Wereld_1());
+                break;
+                case 2:
+                Greenfoot.setWorld(new Wereld_2());
+                break;
+                /* case 3:
+                Greenfoot.setWorld(new Wereld_3());
+                break;
+                case 4:
+                Greenfoot.setWorld(new Wereld_4());
+                break; 
+                */
+            }
                 break;
             }
         }

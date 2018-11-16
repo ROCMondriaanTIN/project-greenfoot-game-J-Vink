@@ -7,7 +7,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Diamant extends Collectable
 {
-    public boolean opgepakt;
     public int diaX;
     public int diaY;
     public int id;
@@ -16,7 +15,6 @@ public class Diamant extends Collectable
     }
     public Diamant(int x, int y) {
         super();
-        this.opgepakt = false;
         this.diaX = x;
         this.diaY = y;
     }
@@ -29,7 +27,6 @@ public class Diamant extends Collectable
             if (hero != null) {
                 Hero.diamanten++;
                 getWorld().removeObject(this);
-                this.opgepakt = true;
                 Collectable.wereld1.remove(id);
                 break;
             }
