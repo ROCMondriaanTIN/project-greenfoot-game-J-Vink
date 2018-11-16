@@ -6,7 +6,7 @@ import java.util.*;
  *
  * @author R. Springer
  */
-public class Wereld_1 extends World {
+public class Wereld_2 extends World {
     public static ArrayList<Collectable> collectables = new ArrayList<Collectable>();
     public static ArrayList<Munt> muntjes = new ArrayList<Munt>();
     public static boolean firstStart = true;
@@ -16,7 +16,7 @@ public class Wereld_1 extends World {
      * Constructor for objects of class MyWorld.
      *
      */
-    public Wereld_1() {
+    public Wereld_2() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
         this.setBackground("bg.png");
@@ -120,6 +120,8 @@ public class Wereld_1 extends World {
         for(int i = 0; i < Collectable.wereld1.size() && Collectable.wereld1.get(i).opgepakt == false; i++){
                 addObject(new Diamant(), Collectable.wereld1.get(i).diaX, Collectable.wereld1.get(i).diaY);
         }
+        
+        Hud.reset();
     }  
     public void voegCoinToe(){
         addObject(new Munt(), (950-(20*Hero.munten)), 50);

@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Startscherm extends World
 {
 
+        public static int hudLevens;
+        public static int hudMunten;
     /**
      * Constructor for objects of class Startscherm.
      * 
@@ -26,6 +28,9 @@ public class Startscherm extends World
     
     void reset(){
         Hero.levens = 7;
+        Hud hud = new Hud();
+        hudLevens = 0;
+        hudMunten = 0;
     }
     
     void voegObjectenToe(){
