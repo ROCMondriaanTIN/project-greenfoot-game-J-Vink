@@ -1,22 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Heart here.
+ * Write a description of class Munt here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Heart extends Hud
+public class Munt extends Hud
 {
+    private int aantalMunten;
     /**
-     * Act - do whatever the Heart wants to do. This method is called whenever
+     * Act - do whatever the Munt wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        // Add your action code here.
     }    
-    public Heart(){
-        setImage("hud_p" + Hero.karakter + ".png");
+    public Munt(){
+        setImage("coinBronze.png");
     }
 }

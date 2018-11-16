@@ -8,6 +8,10 @@ import java.util.*;
  */
 public class Wereld_1 extends World {
     public static ArrayList<Collectable> collectables = new ArrayList<Collectable>();
+    public static ArrayList<Munt> muntjes = new ArrayList<Munt>();
+    private int hudLevens;
+    private int hudMunten;
+    public static boolean firstStart = true;
     private CollisionEngine ce;
     
     /**
@@ -52,7 +56,7 @@ public class Wereld_1 extends World {
             {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
             {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
             {-1,-1,64,64,64,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
-            {-1,-1,65,65,65,65,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,-1,-1,7,8,9,5,5,5,5,5,5,5,5,7,8,8,8,8,8,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
+            {-1,-1,65,65,65,65,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,4,-1,-1,-1,8,9,5,5,5,5,5,5,5,5,7,8,8,8,8,8,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
             {-1,-1,65,65,65,65,-1,-1,-1,-1,-1,-1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,6,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
             {-1,-1,65,65,65,65,-1,-1,-1,-1,-1,128,1,-1,64,64,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,6,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
             {-1,-1,65,65,65,65,-1,-1,-1,-1,64,64,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,64,64,64,64,64,64,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,6,-1,2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
@@ -71,14 +75,7 @@ public class Wereld_1 extends World {
 
         };
         
-        //HUD interface.
-        //Heart
-        for(int i = 0; i < Hero.levens; i++){
-            addObject(new Heart(),(50+(60*i)), 50);
-        }
-        
-        //Diamanten
-        addObject(new Diamanten(), 50, 110);
+
 
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         TileEngine te = new TileEngine(this, 60, 60, map);
@@ -101,8 +98,23 @@ public class Wereld_1 extends World {
         // Collectables
         addObject(new ZilverenMunt(), 144, 1274);
         addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 200, 1274);
         voegCollectablesToe();
         
+        // Reset bij eerste start.
+        if(firstStart == true){
+            reset();
+        }
+        
+        Hud hud = new Hud();
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
         // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
@@ -111,16 +123,50 @@ public class Wereld_1 extends World {
         ce.addCollidingMover(hero);
     }
     
+    public void reset(){
+        hudLevens = 0;
+        hudMunten = 0;
+    }
+    
     public void voegCollectablesToe(){
         for(int i = 0; i < Collectable.wereld1.size() && Collectable.wereld1.get(i).opgepakt == false; i++){
                 addObject(new Diamant(), Collectable.wereld1.get(i).diaX, Collectable.wereld1.get(i).diaY);
         }
+    }  
+    public void voegCoinToe(){
+        addObject(new Munt(), (950-(20*Hero.munten)), 50);
+    }
+    public void update(){
+        // HUD interface.
+        // Heart
+        if(Hero.levens > hudLevens){
+            for(int i = 0; i < Hero.levens; i++){
+                addObject(new Heart(),(50+(60*i)), 50);
+                hudLevens++;
+            }
+        }
+        // Munten
+        if(Hero.munten > hudMunten){
+            for(int i = 0; hudMunten < Hero.munten; i++){
+                addObject(new Munt(),(950-(10*hudMunten)), 50);
+                hudMunten++;
+            }
+        }
+        // Reset munten in HUD wanneer er 40 muntjes zijn verzameld.
+        if(Hero.munten >= 40){
+            Hero.munten = (Hero.munten-40);
+            hudMunten = 0;
+            removeObjects(getObjects(Munt.class));
+            Hero.levens++;
+        }
+        
+        //Diamanten
+        //addObject(new Diamanten(), 50, 110);
     }
         
     @Override
     public void act() {
         ce.update();
-        
-
+        update();
     }
 }

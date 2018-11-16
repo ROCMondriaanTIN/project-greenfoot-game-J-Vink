@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GoudenMunt extends Collectable
 {
-    public boolean opgepakt;
     public GoudenMunt() {
         super();
         setImage("coinGold.png");
@@ -23,7 +22,6 @@ public class GoudenMunt extends Collectable
             if (hero != null) {
                 Hero.munten+=2;
                 getWorld().removeObject(this);
-                this.opgepakt = true;
                 break;
             }
         }

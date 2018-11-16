@@ -1,5 +1,4 @@
 import greenfoot.*;
-
 /**
  *
  * @author R. Springer
@@ -40,6 +39,13 @@ public class Hero extends Mover {
             if (enemy != null) {
                 levens--;
                 Greenfoot.setWorld(new Wereld_1());
+                break;
+            }
+        }
+        
+        for (Actor coin : getIntersectingObjects(GoudenMunt.class)) {
+            if (coin != null) {
+                
                 break;
             }
         }
