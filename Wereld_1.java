@@ -92,7 +92,7 @@ public class Wereld_1 extends World {
         addObject(camera, 0, 0);
         addObject(hero, 300, 200);
         addObject(new Enemy(), 1170, 410);
-        addObject(new Enemy(), 404, 2174);
+        addObject(new Enemy(), 404, 2205);
         
         // Collectables
         addObject(new ZilverenMunt(), 144, 1274);
