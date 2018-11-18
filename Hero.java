@@ -44,9 +44,9 @@ public class Hero extends Mover {
     }
     
     public boolean isVanScherm(){
-        if(getX() < 0 || getX() > getWorld().getWidth())  
+        if(getX() < 0)  
             return true;  
-        if(getY() < 0 || getY() > getWorld().getHeight())  
+        if(getY() < 0)  
             return true;  
         else 
             return false; 
@@ -88,12 +88,6 @@ public class Hero extends Mover {
             }
         }
         
-        for (Actor coin : getIntersectingObjects(GoudenMunt.class)) {
-            if (coin != null) {
-                
-                break;
-            }
-        }
          
         // Check of de speler nog levens over heeft.
         if(levens < 1){
@@ -103,8 +97,12 @@ public class Hero extends Mover {
     
     boolean opGrond(){
         Actor onder = getOneObjectAtOffset(0, getImage().getHeight()/2, Tile.class);
+        /*if(onder.isSolid == true){
+            
+        }*/
         return onder != null;
     }
+        
     
     public void handleInput() {
         if ((Greenfoot.isKeyDown("space")) && (opGrond() == true)) {

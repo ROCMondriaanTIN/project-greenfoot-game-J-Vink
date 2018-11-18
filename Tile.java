@@ -28,6 +28,11 @@ public class Tile extends Actor {
         _id = id;
         id++;
     }
+    
+    public boolean getIsSolid()
+    {
+        return isSolid;
+    }
 
     @Override
     public String toString() {

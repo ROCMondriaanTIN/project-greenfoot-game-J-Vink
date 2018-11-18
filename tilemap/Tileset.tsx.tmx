@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tileset version="1.2" tiledversion="1.2.1" name="Tileset" tilewidth="129" tileheight="146" tilecount="179" columns="0">
+ <grid orientation="orthogonal" width="1" height="1"/>
+ <tile id="0">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/tochLit.png"/>
+ </tile>
+ <tile id="1">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/tochLit2.png"/>
+ </tile>
+ <tile id="2">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/torch.png"/>
+ </tile>
+ <tile id="3">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/window.png"/>
+ </tile>
+ <tile id="4">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/box.png"/>
+ </tile>
+ <tile id="5">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxAlt.png"/>
+ </tile>
+ <tile id="6">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxCoin.png"/>
+ </tile>
+ <tile id="7">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxCoin_disabled.png"/>
+ </tile>
+ <tile id="8">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxCoinAlt.png"/>
+ </tile>
+ <tile id="9">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxCoinAlt_disabled.png"/>
+ </tile>
+ <tile id="10">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxEmpty.png"/>
+ </tile>
+ <tile id="11">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxExplosive.png"/>
+ </tile>
+ <tile id="12">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxExplosive_disabled.png"/>
+ </tile>
+ <tile id="13">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxExplosiveAlt.png"/>
+ </tile>
+ <tile id="14">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxItem.png"/>
+ </tile>
+ <tile id="15">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxItem_disabled.png"/>
+ </tile>
+ <tile id="16">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxItemAlt.png"/>
+ </tile>
+ <tile id="17">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxItemAlt_disabled.png"/>
+ </tile>
+ <tile id="18">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/boxWarning.png"/>
+ </tile>
+ <tile id="19">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/brickWall.png"/>
+ </tile>
+ <tile id="20">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/bridge.png"/>
+ </tile>
+ <tile id="21">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/bridgeLogs.png"/>
+ </tile>
+ <tile id="22">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castle.png"/>
+ </tile>
+ <tile id="23">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleCenter.png"/>
+ </tile>
+ <tile id="24">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleCenter_rounded.png"/>
+ </tile>
+ <tile id="25">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleCliffLeft.png"/>
+ </tile>
+ <tile id="26">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleCliffLeftAlt.png"/>
+ </tile>
+ <tile id="27">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleCliffRight.png"/>
+ </tile>
+ <tile id="28">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleCliffRightAlt.png"/>
+ </tile>
+ <tile id="29">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHalf.png"/>
+ </tile>
+ <tile id="30">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHalfLeft.png"/>
+ </tile>
+ <tile id="31">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHalfMid.png"/>
+ </tile>
+ <tile id="32">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHalfRight.png"/>
+ </tile>
+ <tile id="33">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHillLeft.png"/>
+ </tile>
+ <tile id="34">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHillLeft2.png"/>
+ </tile>
+ <tile id="35">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHillRight.png"/>
+ </tile>
+ <tile id="36">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleHillRight2.png"/>
+ </tile>
+ <tile id="37">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="22" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleLedgeLeft.png"/>
+ </tile>
+ <tile id="38">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="22" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleLedgeRight.png"/>
+ </tile>
+ <tile id="39">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleLeft.png"/>
+ </tile>
+ <tile id="40">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleMid.png"/>
+ </tile>
+ <tile id="41">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/castleRight.png"/>
+ </tile>
+ <tile id="42">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirt.png"/>
+ </tile>
+ <tile id="43">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtCenter.png"/>
+ </tile>
+ <tile id="44">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtCenter_rounded.png"/>
+ </tile>
+ <tile id="45">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtCliffLeft.png"/>
+ </tile>
+ <tile id="46">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtCliffLeftAlt.png"/>
+ </tile>
+ <tile id="47">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtCliffRight.png"/>
+ </tile>
+ <tile id="48">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtCliffRightAlt.png"/>
+ </tile>
+ <tile id="49">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHalf.png"/>
+ </tile>
+ <tile id="50">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHalfLeft.png"/>
+ </tile>
+ <tile id="51">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHalfMid.png"/>
+ </tile>
+ <tile id="52">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHalfRight.png"/>
+ </tile>
+ <tile id="53">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHillLeft.png"/>
+ </tile>
+ <tile id="54">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHillLeft2.png"/>
+ </tile>
+ <tile id="55">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHillRight.png"/>
+ </tile>
+ <tile id="56">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtHillRight2.png"/>
+ </tile>
+ <tile id="57">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="18" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtLedgeLeft.png"/>
+ </tile>
+ <tile id="58">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="18" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtLedgeRight.png"/>
+ </tile>
+ <tile id="59">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtLeft.png"/>
+ </tile>
+ <tile id="60">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtMid.png"/>
+ </tile>
+ <tile id="61">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/dirtRight.png"/>
+ </tile>
+ <tile id="62">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/door_closedMid.png"/>
+ </tile>
+ <tile id="63">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/door_closedTop.png"/>
+ </tile>
+ <tile id="64">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/door_openMid.png"/>
+ </tile>
+ <tile id="65">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/door_openTop.png"/>
+ </tile>
+ <tile id="66">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/fence.png"/>
+ </tile>
+ <tile id="67">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/fenceBroken.png"/>
+ </tile>
+ <tile id="68">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grass.png"/>
+ </tile>
+ <tile id="69">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassCenter.png"/>
+ </tile>
+ <tile id="70">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassCenter_rounded.png"/>
+ </tile>
+ <tile id="71">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassCliffLeft.png"/>
+ </tile>
+ <tile id="72">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassCliffLeftAlt.png"/>
+ </tile>
+ <tile id="73">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassCliffRight.png"/>
+ </tile>
+ <tile id="74">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassCliffRightAlt.png"/>
+ </tile>
+ <tile id="75">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHalf.png"/>
+ </tile>
+ <tile id="76">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHalfLeft.png"/>
+ </tile>
+ <tile id="77">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHalfMid.png"/>
+ </tile>
+ <tile id="78">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHalfRight.png"/>
+ </tile>
+ <tile id="79">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHillLeft.png"/>
+ </tile>
+ <tile id="80">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHillLeft2.png"/>
+ </tile>
+ <tile id="81">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHillRight.png"/>
+ </tile>
+ <tile id="82">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassHillRight2.png"/>
+ </tile>
+ <tile id="83">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="24" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassLedgeLeft.png"/>
+ </tile>
+ <tile id="84">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="24" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassLedgeRight.png"/>
+ </tile>
+ <tile id="85">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassLeft.png"/>
+ </tile>
+ <tile id="86">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassMid.png"/>
+ </tile>
+ <tile id="87">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/grassRight.png"/>
+ </tile>
+ <tile id="88">
+  <image width="48" height="146" source="../../platformerGraphicsDeluxeUpdated/Tiles/hill_large.png"/>
+ </tile>
+ <tile id="89">
+  <image width="48" height="146" source="../../platformerGraphicsDeluxeUpdated/Tiles/hill_largeAlt.png"/>
+ </tile>
+ <tile id="90">
+  <image width="48" height="106" source="../../platformerGraphicsDeluxeUpdated/Tiles/hill_small.png"/>
+ </tile>
+ <tile id="91">
+  <image width="48" height="106" source="../../platformerGraphicsDeluxeUpdated/Tiles/hill_smallAlt.png"/>
+ </tile>
+ <tile id="92">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/ladder_mid.png"/>
+ </tile>
+ <tile id="93">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/ladder_top.png"/>
+ </tile>
+ <tile id="94">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/liquidLava.png"/>
+ </tile>
+ <tile id="95">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/liquidLavaTop.png"/>
+ </tile>
+ <tile id="96">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/liquidLavaTop_mid.png"/>
+ </tile>
+ <tile id="97">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/liquidWater.png"/>
+ </tile>
+ <tile id="98">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/liquidWaterTop.png"/>
+ </tile>
+ <tile id="99">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/liquidWaterTop_mid.png"/>
+ </tile>
+ <tile id="100">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/rockHillLeft.png"/>
+ </tile>
+ <tile id="101">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/rockHillRight.png"/>
+ </tile>
+ <tile id="102">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/ropeAttached.png"/>
+ </tile>
+ <tile id="103">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/ropeHorizontal.png"/>
+ </tile>
+ <tile id="104">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/ropeVertical.png"/>
+ </tile>
+ <tile id="105">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sand.png"/>
+ </tile>
+ <tile id="106">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandCenter.png"/>
+ </tile>
+ <tile id="107">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandCenter_rounded.png"/>
+ </tile>
+ <tile id="108">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandCliffLeft.png"/>
+ </tile>
+ <tile id="109">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandCliffLeftAlt.png"/>
+ </tile>
+ <tile id="110">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandCliffRight.png"/>
+ </tile>
+ <tile id="111">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandCliffRightAlt.png"/>
+ </tile>
+ <tile id="112">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHalf.png"/>
+ </tile>
+ <tile id="113">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHalfLeft.png"/>
+ </tile>
+ <tile id="114">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHalfMid.png"/>
+ </tile>
+ <tile id="115">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHalfRight.png"/>
+ </tile>
+ <tile id="116">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHillLeft.png"/>
+ </tile>
+ <tile id="117">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHillLeft2.png"/>
+ </tile>
+ <tile id="118">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHillRight.png"/>
+ </tile>
+ <tile id="119">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandHillRight2.png"/>
+ </tile>
+ <tile id="120">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="18" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandLedgeLeft.png"/>
+ </tile>
+ <tile id="121">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="18" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandLedgeRight.png"/>
+ </tile>
+ <tile id="122">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandLeft.png"/>
+ </tile>
+ <tile id="123">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandMid.png"/>
+ </tile>
+ <tile id="124">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sandRight.png"/>
+ </tile>
+ <tile id="125">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/sign.png"/>
+ </tile>
+ <tile id="126">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/signExit.png"/>
+ </tile>
+ <tile id="127">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/signLeft.png"/>
+ </tile>
+ <tile id="128">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/signRight.png"/>
+ </tile>
+ <tile id="129">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snow.png"/>
+ </tile>
+ <tile id="130">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowCenter.png"/>
+ </tile>
+ <tile id="131">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowCenter_rounded.png"/>
+ </tile>
+ <tile id="132">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowCliffLeft.png"/>
+ </tile>
+ <tile id="133">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowCliffLeftAlt.png"/>
+ </tile>
+ <tile id="134">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowCliffRight.png"/>
+ </tile>
+ <tile id="135">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowCliffRightAlt.png"/>
+ </tile>
+ <tile id="136">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHalf.png"/>
+ </tile>
+ <tile id="137">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHalfLeft.png"/>
+ </tile>
+ <tile id="138">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHalfMid.png"/>
+ </tile>
+ <tile id="139">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHalfRight.png"/>
+ </tile>
+ <tile id="140">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHillLeft.png"/>
+ </tile>
+ <tile id="141">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHillLeft2.png"/>
+ </tile>
+ <tile id="142">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHillRight.png"/>
+ </tile>
+ <tile id="143">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowHillRight2.png"/>
+ </tile>
+ <tile id="144">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="18" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowLedgeLeft.png"/>
+ </tile>
+ <tile id="145">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="18" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowLedgeRight.png"/>
+ </tile>
+ <tile id="146">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowLeft.png"/>
+ </tile>
+ <tile id="147">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowMid.png"/>
+ </tile>
+ <tile id="148">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowRight.png"/>
+ </tile>
+ <tile id="149">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stone.png"/>
+ </tile>
+ <tile id="150">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneCenter.png"/>
+ </tile>
+ <tile id="151">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneCenter_rounded.png"/>
+ </tile>
+ <tile id="152">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneCliffLeft.png"/>
+ </tile>
+ <tile id="153">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneCliffLeftAlt.png"/>
+ </tile>
+ <tile id="154">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneCliffRight.png"/>
+ </tile>
+ <tile id="155">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneCliffRightAlt.png"/>
+ </tile>
+ <tile id="156">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneHalf.png"/>
+ </tile>
+ <tile id="157">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneHalfLeft.png"/>
+ </tile>
+ <tile id="158">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneHalfMid.png"/>
+ </tile>
+ <tile id="159">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneHalfRight.png"/>
+ </tile>
+ <tile id="160">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneHillLeft2.png"/>
+ </tile>
+ <tile id="161">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneHillRight2.png"/>
+ </tile>
+ <tile id="162">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="24" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneLedgeLeft.png"/>
+ </tile>
+ <tile id="163">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="5" height="24" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneLedgeRight.png"/>
+ </tile>
+ <tile id="164">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneLeft.png"/>
+ </tile>
+ <tile id="165">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneMid.png"/>
+ </tile>
+ <tile id="166">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneRight.png"/>
+ </tile>
+ <tile id="167">
+  <properties>
+   <property name="tile.isSolid" type="bool" value="true"/>
+  </properties>
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/stoneWall.png"/>
+ </tile>
+ <tile id="168">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/bush.png"/>
+ </tile>
+ <tile id="169">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/cactus.png"/>
+ </tile>
+ <tile id="170">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/chain.png"/>
+ </tile>
+ <tile id="171">
+  <image width="128" height="71" source="../../platformerGraphicsDeluxeUpdated/Tiles/cloud1.png"/>
+ </tile>
+ <tile id="172">
+  <image width="129" height="71" source="../../platformerGraphicsDeluxeUpdated/Tiles/cloud2.png"/>
+ </tile>
+ <tile id="173">
+  <image width="129" height="71" source="../../platformerGraphicsDeluxeUpdated/Tiles/cloud3.png"/>
+ </tile>
+ <tile id="174">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/mushroomBrown.png"/>
+ </tile>
+ <tile id="175">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/mushroomRed.png"/>
+ </tile>
+ <tile id="176">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/plant.png"/>
+ </tile>
+ <tile id="177">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/rock.png"/>
+ </tile>
+ <tile id="178">
+  <image width="70" height="70" source="../../platformerGraphicsDeluxeUpdated/Tiles/snowhill.png"/>
+ </tile>
+</tileset>
