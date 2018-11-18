@@ -44,5 +44,14 @@ public class Enemy extends Mover {
             x = xMin;
             getImage().mirrorHorizontally();
         }
+        
+        if (getOneObjectAtOffset(0, -45, Hero.class) != null) 
+        {      
+           getWorld().removeObject(this);  
+        }     
+        else if(getOneObjectAtOffset(-19, 10, Hero.class) != null || getOneObjectAtOffset(19, 10, Hero.class) != null )
+        {  
+            Hero.gaatAf();
+        }
     }
 }

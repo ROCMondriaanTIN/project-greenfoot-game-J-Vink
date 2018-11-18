@@ -23,6 +23,34 @@ public class Hero extends Mover {
         drag = 0.8;
         setImage("p" + karakter + ".png");
     }
+    
+    public static void gaatAf(){
+        levens--;
+         switch(wereld){
+              case 1:
+              Greenfoot.setWorld(new Wereld_1());
+              break;
+              case 2:
+              Greenfoot.setWorld(new Wereld_2());
+              break;
+              /* case 3:
+               * Greenfoot.setWorld(new Wereld_3());
+               * break;
+               * case 4:
+               * Greenfoot.setWorld(new Wereld_4());
+               * break; 
+               */
+        }
+    }
+    
+    public boolean isVanScherm(){
+        if(getX() < 0 || getX() > getWorld().getWidth())  
+            return true;  
+        if(getY() < 0 || getY() > getWorld().getHeight())  
+            return true;  
+        else 
+            return false; 
+    }
 
     @Override
     public void act() {
@@ -34,26 +62,29 @@ public class Hero extends Mover {
             velocityY = gravity;
         }
         applyVelocity();
-
-        for (Actor enemy : getIntersectingObjects(Enemy.class)) {
+        
+        if (isVanScherm())
+        {
+          gaatAf();
+        }
+        
+        for (Actor enemy : getIntersectingObjects(Vuurbal.class)) {
             if (enemy != null) {
-                levens--;
-            switch(wereld){
-                case 1:
-                Greenfoot.setWorld(new Wereld_1());
-                break;
-                case 2:
-                Greenfoot.setWorld(new Wereld_2());
-                break;
-                /* case 3:
-                Greenfoot.setWorld(new Wereld_3());
-                break;
-                case 4:
-                Greenfoot.setWorld(new Wereld_4());
-                break; 
-                */
-            }
-                break;
+               levens--;
+                switch(wereld){
+                    case 1:
+                    Greenfoot.setWorld(new Wereld_1());
+                    break;
+                    case 2:
+                    Greenfoot.setWorld(new Wereld_2());
+                    break;
+                    /*case 3:
+                    Greenfoot.setWorld(new Wereld_3());
+                    break;
+                    case 4:
+                    Greenfoot.setWorld(new Wereld_4());
+                    break;*/ 
+               }
             }
         }
         

@@ -22,14 +22,18 @@ public class Startscherm extends World
         this.setBackground("bg.png");
         Start start = new Start();
         addObject(start, 500, 650);
-        Hero.levens = 5;
         reset();
+        Hero.levens = 5;
         voegObjectenToe();
     }
     
     public static void reset(){
         hudLevens = 0;
         hudMunten = 0;
+        Hero.levens = 0;
+        Hero.munten = 0;
+        Hero.diamanten = 0;
+        Hero.sleutels = 0;
     }
     
     void voegObjectenToe(){
