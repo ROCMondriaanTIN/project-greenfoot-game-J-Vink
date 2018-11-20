@@ -19,7 +19,7 @@ public class Startscherm extends World
     {    
         // Create a new world with 1000*800 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1); 
-        this.setBackground("start_bg.png");
+        this.setBackground("bg_blender.jpg");
         Start start = new Start();
         addObject(start, 500, 650);
         reset();

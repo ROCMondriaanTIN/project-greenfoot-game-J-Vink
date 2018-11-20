@@ -51,6 +51,19 @@ public class Hero extends Mover {
         else 
             return false; 
     }
+    
+    void opWater(){
+        Actor onder = getOneObjectAtOffset(0, getImage().getHeight()/2, Water.class);
+        if(onder != null){
+            gaatAf();
+        }
+    }
+    void opLava(){
+        Actor onder = getOneObjectAtOffset(0, getImage().getHeight()/2, Lava.class);
+        if(onder != null){
+            gaatAf();
+        }
+    }
 
     @Override
     public void act() {
@@ -68,7 +81,7 @@ public class Hero extends Mover {
           gaatAf();
         }
         
-        for (Actor enemy : getIntersectingObjects(Vuurbal.class)) {
+        for (Vuurbal enemy : getIntersectingObjects(Vuurbal.class)) {
             if (enemy != null) {
                levens--;
                 switch(wereld){
@@ -88,6 +101,7 @@ public class Hero extends Mover {
             }
         }
         
+        opWater();
          
         // Check of de speler nog levens over heeft.
         if(levens < 1){
@@ -97,10 +111,14 @@ public class Hero extends Mover {
     
     boolean opGrond(){
         Actor onder = getOneObjectAtOffset(0, getImage().getHeight()/2, Tile.class);
-        /*if(onder.isSolid == true){
-            
-        }*/
-        return onder != null;
+        //boolean test = onder.getIsSolid();
+        Tile tile = (Tile) onder;
+        if(tile != null) {
+            if(tile.isSolid){
+                return true;
+            }
+        }
+        return false;
     }
         
     

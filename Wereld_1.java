@@ -18,7 +18,7 @@ public class Wereld_1 extends World {
     public Wereld_1() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
-        this.setBackground("bg.png");
+        this.setBackground("bg_blender.jpg");
         
         int[][] map = {
             {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
@@ -95,7 +95,7 @@ public class Wereld_1 extends World {
         
         // Collectables
         addObject(new ZilverenMunt(), 144, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
+        addObject(new GoudenMunt(), 500, 2594);
         addObject(new GoudenMunt(), 200, 1274);
         addObject(new GoudenMunt(), 200, 1274);
         addObject(new GoudenMunt(), 200, 1274);
