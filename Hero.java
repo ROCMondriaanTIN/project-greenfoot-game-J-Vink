@@ -15,6 +15,8 @@ public class Hero extends Mover {
     protected static int diamanten;
     public static int levens;
     public static int sleutels;
+    GreenfootImage[] images = new GreenfootImage[11];
+    int imageNumber;
 
     public Hero() {
         super();
@@ -22,6 +24,9 @@ public class Hero extends Mover {
         acc = 0.9;
         drag = 0.8;
         setImage("p" + karakter + ".png");
+        
+        for( int i=0; i<images.length; i++ ) images[i] = new GreenfootImage( "p" + karakter + "_walk" + (i+1) + ".png" );
+        setImage( images[imageNumber] );
     }
     
     public static void gaatAf(){
@@ -120,6 +125,12 @@ public class Hero extends Mover {
         }
         return false;
     }
+    
+        public void animation()
+    {
+        imageNumber = ( imageNumber + 1 ) % images.length;
+        setImage( images[imageNumber] );
+    }
         
     
     public void handleInput() {
@@ -128,8 +139,10 @@ public class Hero extends Mover {
         }
 
         if (Greenfoot.isKeyDown("left")) {
+            animation();
             velocityX = -10;
         } else if (Greenfoot.isKeyDown("right")) {
+            animation();
             velocityX = 10;
         }
     }
