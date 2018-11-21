@@ -113,14 +113,16 @@ public class Wereld_1 extends World {
                 addObject(new ZilverenMunt(), Collectable.zilverenMunt.get(i).muntX, Collectable.zilverenMunt.get(i).muntY);
             }
         }
-        for(int i = 0; i < Collectable.goudenMunt.size(); i++){
+        /*for(int i = 0; i < Collectable.goudenMunt.size(); i++){
             if(Collectable.goudenMunt.get(i).wereld == Hero.wereld){
                 addObject(new GoudenMunt(), Collectable.goudenMunt.get(i).muntX, Collectable.goudenMunt.get(i).muntY);
             }
+        }*/
+        for(int i = 0; i < Collectable.goudenMunten.size(); i++){
+            if(Collectable.goudenMunten.get(i).wereld == Hero.wereld){
+                addObject(Collectable.goudenMunten.get(i), Collectable.goudenMunten.get(i).muntX, Collectable.goudenMunten.get(i).muntY);
+            }
         }
-    }  
-    public void voegCoinToe(){
-        addObject(new Munt(), (950-(20*Hero.munten)), 50);
     }
 
         

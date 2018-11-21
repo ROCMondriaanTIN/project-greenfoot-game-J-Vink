@@ -112,9 +112,6 @@ public class Wereld_2 extends World {
         }
         
         Hud.reset();
-    }  
-    public void voegCoinToe(){
-        addObject(new Munt(), (950-(20*Hero.munten)), 50);
     }
 
         

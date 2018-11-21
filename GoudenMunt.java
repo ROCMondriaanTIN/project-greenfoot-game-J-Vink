@@ -12,8 +12,9 @@ public class GoudenMunt extends Collectable
 {
     public int muntX;
     public int muntY;
-    protected int wereld;
+    public int wereld;
     public int id;
+    public char type;
     public static int sID;
     public GoudenMunt(){
         super();
@@ -21,13 +22,14 @@ public class GoudenMunt extends Collectable
         this.id = sID;
         sID++;
     }
-    public GoudenMunt(int x, int y, int wereld) {
+    public GoudenMunt(int x, int y, int wereld, char type) {
         super();
         setImage("coinGold.png");
         Collectable.colNr++;
         this.muntX = x;
         this.muntY = y;
         this.wereld = wereld;
+        this.type = type;
     }
 
     @Override
@@ -38,7 +40,7 @@ public class GoudenMunt extends Collectable
             if (hero != null) {
                 Hero.munten+=2;
                 getWorld().removeObject(this);
-                Collectable.goudenMunt.remove(id);
+                Collectable.goudenMunt.remove(this);
                 break;
             }
         }

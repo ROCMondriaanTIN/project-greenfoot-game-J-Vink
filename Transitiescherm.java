@@ -36,7 +36,7 @@ public class Transitiescherm extends World
         //addObject(new GoudenMunt(), 500, 2594);
         //addObject(new GoudenMunt(), 200, 1274);
         
-        GoudenMunt munt1 = new GoudenMunt(500, 2650, 1);
-        Collectable.goudenMunt.add(munt1);
+        GoudenMunt munt2 = new GoudenMunt(500, 2650, 1, 'g');
+        Collectable.goudenMunten.add(munt2);
     }
 }

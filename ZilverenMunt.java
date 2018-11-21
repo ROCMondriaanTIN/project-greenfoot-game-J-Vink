@@ -34,7 +34,6 @@ public class ZilverenMunt extends Collectable{
                 Hero.munten++;
                 getWorld().removeObject(this);
                 Collectable.zilverenMunt.remove(id);
-                
                 break;
             }
         }
