@@ -96,16 +96,6 @@ public class Wereld_2 extends World {
         
         // Collectables
         addObject(new ZilverenMunt(), 144, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
         voegCollectablesToe();
         
         addObject(new Hud(),-10,-10);

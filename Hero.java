@@ -113,8 +113,7 @@ public class Hero extends Mover {
         return false;
     }
     
-        public void animation()
-    {
+    public void animation(){
         imageNumber = ( imageNumber + 1 ) % images.length;
         setImage( images[imageNumber] );
     }

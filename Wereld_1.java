@@ -90,21 +90,9 @@ public class Wereld_1 extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 154, 2594);
-        addObject(new Enemy(), 1520, 2505);
         addObject(new Enemy(), 404, 2205);
         
         // Collectables
-        addObject(new ZilverenMunt(), 144, 1274);
-        addObject(new GoudenMunt(), 500, 2594);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
-        addObject(new GoudenMunt(), 200, 1274);
         voegCollectablesToe();
         
         addObject(new Hud(),-10,-10);
@@ -123,6 +111,12 @@ public class Wereld_1 extends World {
     public void voegCollectablesToe(){
         for(int i = 0; i < Collectable.wereld1.size(); i++){
                 addObject(new Diamant(), Collectable.wereld1.get(i).diaX, Collectable.wereld1.get(i).diaY);
+        }
+        for(int i = 0; i < Collectable.zilverenMuntWereld1.size(); i++){
+                addObject(new ZilverenMunt(), Collectable.zilverenMuntWereld1.get(i).muntX, Collectable.zilverenMuntWereld1.get(i).muntY);
+        }
+        for(int i = 0; i < Collectable.goudenMuntWereld1.size(); i++){
+                addObject(new GoudenMunt(), Collectable.goudenMuntWereld1.get(i).muntX, Collectable.goudenMuntWereld1.get(i).muntY);
         }
     }  
     public void voegCoinToe(){

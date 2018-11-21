@@ -27,7 +27,20 @@ public class Diamant extends Collectable
             if (hero != null) {
                 Hero.diamanten++;
                 getWorld().removeObject(this);
-                Collectable.wereld1.remove(id);
+                    switch(Hero.wereld){
+                     case 1:
+                     Collectable.wereld1.remove(id);
+                     break;
+                     case 2:
+                     Collectable.wereld2.remove(id);
+                     break;
+                     /*case 3:
+                     Collectable.wereld3.remove(id);
+                     break;
+                     case 4:
+                     Collectable.wereld4.remove(id);
+                     break; */
+                    }
                 break;
             }
         }

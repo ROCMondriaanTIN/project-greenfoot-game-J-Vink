@@ -9,6 +9,14 @@ import java.util.ArrayList;
 public class Collectable extends Mover{
 
     public static int colNr;
-    
+    public static ArrayList<ZilverenMunt> zilverenMuntWereld1 = new ArrayList<ZilverenMunt>();
+    public static ArrayList<ZilverenMunt> zilverenMuntWereld2 = new ArrayList<ZilverenMunt>();
+    public static ArrayList<ZilverenMunt> zilverenMuntWereld3 = new ArrayList<ZilverenMunt>();
+    public static ArrayList<ZilverenMunt> zilverenMuntWereld4 = new ArrayList<ZilverenMunt>();
+    public static ArrayList<GoudenMunt> goudenMuntWereld1 = new ArrayList<GoudenMunt>();
+    public static ArrayList<GoudenMunt> goudenMuntWereld2 = new ArrayList<GoudenMunt>();
+    public static ArrayList<GoudenMunt> goudenMuntWereld3 = new ArrayList<GoudenMunt>();
+    public static ArrayList<GoudenMunt> goudenMuntWereld4 = new ArrayList<GoudenMunt>();
     public static ArrayList<Diamant> wereld1 = new ArrayList<Diamant>();
+    public static ArrayList<Diamant> wereld2 = new ArrayList<Diamant>();
 }
