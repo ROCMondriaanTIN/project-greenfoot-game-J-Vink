@@ -81,33 +81,18 @@ public class Hero extends Mover {
         }
         applyVelocity();
         
-        if (isVanScherm())
-        {
+        // Kijk of de speler zich op het water bevind of van het scherm is.
+        opWater();
+        if (isVanScherm()){
           gaatAf();
         }
         
         for (Vuurbal enemy : getIntersectingObjects(Vuurbal.class)) {
             if (enemy != null) {
-               levens--;
-                switch(wereld){
-                    case 1:
-                    Greenfoot.setWorld(new Wereld_1());
-                    break;
-                    case 2:
-                    Greenfoot.setWorld(new Wereld_2());
-                    break;
-                    /*case 3:
-                    Greenfoot.setWorld(new Wereld_3());
-                    break;
-                    case 4:
-                    Greenfoot.setWorld(new Wereld_4());
-                    break;*/ 
-               }
+               gaatAf();
             }
         }
         
-        opWater();
-         
         // Check of de speler nog levens over heeft.
         if(levens < 1){
             Greenfoot.setWorld(new GameOver());
@@ -120,9 +105,11 @@ public class Hero extends Mover {
         Tile tile = (Tile) onder;
         if(tile != null) {
             if(tile.isSolid){
+                setImage( images[5] );
                 return true;
             }
         }
+        setImage( images[3] );
         return false;
     }
     
@@ -139,10 +126,14 @@ public class Hero extends Mover {
         }
 
         if (Greenfoot.isKeyDown("left")) {
-            animation();
+            if(opGrond() == true){
+                animation();
+            }
             velocityX = -10;
         } else if (Greenfoot.isKeyDown("right")) {
-            animation();
+            if(opGrond() == true){
+                animation();
+            }
             velocityX = 10;
         }
     }
