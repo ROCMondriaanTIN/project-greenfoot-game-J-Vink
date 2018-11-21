@@ -33,20 +33,8 @@ public class ZilverenMunt extends Collectable{
             if (hero != null) {
                 Hero.munten++;
                 getWorld().removeObject(this);
-                 switch(Hero.wereld){
-                     case 1:
-                     Collectable.zilverenMuntWereld1.remove(id);
-                     break;
-                     case 2:
-                     Collectable.zilverenMuntWereld2.remove(id);
-                     break;
-                     /*case 3:
-                     Collectable.zilverenMuntWereld3.remove(id);
-                     break;
-                     case 4:
-                     Collectable.zilverenMuntWereld4.remove(id);
-                     break; */
-                    }
+                Collectable.zilverenMunt.remove(id);
+                
                 break;
             }
         }

@@ -104,19 +104,19 @@ public class Wereld_1 extends World {
         ce.addCollidingMover(hero);
     }
     
-        public int mapHoogte(){
-            return 5;
-        }
-    
     public void voegCollectablesToe(){
         for(int i = 0; i < Collectable.wereld1.size(); i++){
                 addObject(new Diamant(), Collectable.wereld1.get(i).diaX, Collectable.wereld1.get(i).diaY);
         }
-        for(int i = 0; i < Collectable.zilverenMuntWereld1.size(); i++){
-                addObject(new ZilverenMunt(), Collectable.zilverenMuntWereld1.get(i).muntX, Collectable.zilverenMuntWereld1.get(i).muntY);
+        for(int i = 0; i < Collectable.zilverenMunt.size(); i++){
+            if(Collectable.goudenMunt.get(i).wereld == Hero.wereld){
+                addObject(new ZilverenMunt(), Collectable.zilverenMunt.get(i).muntX, Collectable.zilverenMunt.get(i).muntY);
+            }
         }
-        for(int i = 0; i < Collectable.goudenMuntWereld1.size(); i++){
-                addObject(new GoudenMunt(), Collectable.goudenMuntWereld1.get(i).muntX, Collectable.goudenMuntWereld1.get(i).muntY);
+        for(int i = 0; i < Collectable.goudenMunt.size(); i++){
+            if(Collectable.goudenMunt.get(i).wereld == Hero.wereld){
+                addObject(new GoudenMunt(), Collectable.goudenMunt.get(i).muntX, Collectable.goudenMunt.get(i).muntY);
+            }
         }
     }  
     public void voegCoinToe(){

@@ -6,9 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Jeffrey Vink) 
  * @version (a version number or a date)
  */
-public class Startscherm extends World
-{
-
+public class Startscherm extends World{
         public static int hudLevens;
         public static int hudMunten;
     /**
