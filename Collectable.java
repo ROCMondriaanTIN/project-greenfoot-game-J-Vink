@@ -7,12 +7,6 @@ import java.util.ArrayList;
  * @version (a version number or a date)
  */
 public class Collectable extends Mover{
-
-    public static int colNr;
-    public static ArrayList<GoudenMunt> goudenMunten = new ArrayList<>();
-    public static ArrayList<ZilverenMunt> zilverenMunten = new ArrayList<>();
-    public static ArrayList<ZilverenMunt> zilverenMunt = new ArrayList<>();
-    public static ArrayList<GoudenMunt> goudenMunt = new ArrayList<GoudenMunt>();
-    public static ArrayList<Diamant> wereld1 = new ArrayList<Diamant>();
-    public static ArrayList<Diamant> wereld2 = new ArrayList<Diamant>();
+    public static ArrayList<GoudenMunt> goudenMunten = new ArrayList();
+    public static ArrayList<ZilverenMunt> zilverenMunten = new ArrayList();
 }

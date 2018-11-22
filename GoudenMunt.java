@@ -14,22 +14,15 @@ public class GoudenMunt extends Collectable
     public int muntY;
     public int wereld;
     public int id;
-    public char type;
     public static int sID;
-    public GoudenMunt(){
+    public GoudenMunt(int x, int y, int wereld) {
         super();
         setImage("coinGold.png");
-        this.id = sID;
-        sID++;
-    }
-    public GoudenMunt(int x, int y, int wereld, char type) {
-        super();
-        setImage("coinGold.png");
-        Collectable.colNr++;
         this.muntX = x;
         this.muntY = y;
         this.wereld = wereld;
-        this.type = type;
+        this.id = sID;
+        sID++;
     }
 
     @Override
@@ -38,9 +31,10 @@ public class GoudenMunt extends Collectable
         
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
-                Hero.munten+=2;
+                Hero.munten++;
+                Hero.muntWaarde+=2;
                 getWorld().removeObject(this);
-                Collectable.goudenMunt.remove(this);
+                Collectable.goudenMunten.remove(this);
                 break;
             }
         }

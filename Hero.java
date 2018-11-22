@@ -8,10 +8,10 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
-    private boolean jumping;
     protected static int karakter;
     public static int wereld = 1;
     protected static int munten;
+    protected static int muntWaarde;
     protected static int diamanten;
     public static int levens;
     public static int sleutels;
@@ -27,6 +27,8 @@ public class Hero extends Mover {
         
         for( int i=0; i<images.length; i++ ) images[i] = new GreenfootImage( "p" + karakter + "_walk" + (i+1) + ".png" );
         setImage( images[imageNumber] );
+        
+        
     }
     
     public static void gaatAf(){
@@ -35,7 +37,7 @@ public class Hero extends Mover {
               case 1:
               Greenfoot.setWorld(new Wereld_1());
               break;
-              case 2:
+              /*case 2:
               Greenfoot.setWorld(new Wereld_2());
               break;
               /* case 3:

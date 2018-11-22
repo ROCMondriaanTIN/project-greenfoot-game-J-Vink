@@ -8,8 +8,6 @@ import java.util.ArrayList;
  */
 public class Hud extends Actor
 {
-    static ArrayList<Munt> munten = new ArrayList<Munt>();
-    private int aantalMunten=0;
     public void update(){
         // HUD interface.
         // Heart
@@ -22,21 +20,15 @@ public class Hud extends Actor
         // Munten
         if(Hero.munten > Startscherm.hudMunten){
             for(int i = 0; Startscherm.hudMunten < Hero.munten; i++){
-                //if(munten.get(i).type == 'z'){}
-                if((Hero.munten-Startscherm.hudMunten) > 1){
-                    getWorld().addObject(Collectable.goudenMunten.get(i), (950-(10*aantalMunten)), 50);
-                }
-                
-                //addObject(new Munt(),(950-(10*Startscherm.hudMunten)), 50);
-                if(munten.get(i).type == 'g'){Startscherm.hudMunten += 2;}
-                else{Startscherm.hudMunten++;}
-                aantalMunten++;
+                getWorld().addObject(new Munt(), (950-(10*Startscherm.hudMunten)), 50);
+                Startscherm.hudMunten++;
             }
         }
         // Reset munten in HUD wanneer er 40 muntjes zijn verzameld.
-        if(Hero.munten >= 40){
+        if(Hero.muntWaarde >= 40){
             Hero.munten = (Hero.munten-40);
             Startscherm.hudMunten = 0;
+            Hero.muntWaarde = 0;
             getWorld().removeObjects(getWorld().getObjects(Munt.class));
             Hero.levens++;
         }

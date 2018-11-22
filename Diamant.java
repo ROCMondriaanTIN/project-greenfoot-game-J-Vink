@@ -29,11 +29,11 @@ public class Diamant extends Collectable
                 getWorld().removeObject(this);
                     switch(Hero.wereld){
                      case 1:
-                     Collectable.wereld1.remove(id);
+                     //Collectable.wereld1.remove(id);
                      break;
-                     case 2:
-                     Collectable.wereld2.remove(id);
-                     break;
+                     //case 2:
+                     //Collectable.wereld2.remove(id);
+                     //break;
                      /*case 3:
                      Collectable.wereld3.remove(id);
                      break;

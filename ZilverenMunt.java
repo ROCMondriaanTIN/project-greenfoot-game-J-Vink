@@ -9,20 +9,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ZilverenMunt extends Collectable{
     public int muntX;
     public int muntY;
+    public int wereld;
     public int id;
     public static int sID;
-    public ZilverenMunt(){
+    public ZilverenMunt(int x, int y, int wereld) {
         super();
         setImage("coinSilver.png");
-        this.id = sID;
-        sID++;
-    }
-    public ZilverenMunt(int x, int y) {
-        super();
-        setImage("coinSilver.png");
-        Collectable.colNr++;
         this.muntX = x;
         this.muntY = y;
+        this.wereld = wereld;
+        this.id = sID;
+        sID++;
     }
 
     @Override
@@ -32,8 +29,9 @@ public class ZilverenMunt extends Collectable{
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
                 Hero.munten++;
+                Hero.muntWaarde++;
                 getWorld().removeObject(this);
-                Collectable.zilverenMunt.remove(id);
+                Collectable.goudenMunten.remove(id);
                 break;
             }
         }

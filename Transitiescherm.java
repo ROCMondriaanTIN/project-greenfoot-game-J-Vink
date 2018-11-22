@@ -28,15 +28,19 @@ public class Transitiescherm extends World
     }
     
     void resetMunten(){
-        Collectable.zilverenMunt.clear();
-        Collectable.goudenMunt.clear();
+        Collectable.goudenMunten.clear();
+        Collectable.zilverenMunten.clear();
     }
     
     void voegMuntenToe(){
-        //addObject(new GoudenMunt(), 500, 2594);
-        //addObject(new GoudenMunt(), 200, 1274);
+        GoudenMunt gMunt1 = new GoudenMunt(500, 2594, 1);
+        Collectable.goudenMunten.add(gMunt1);
+        GoudenMunt gMunt2 = new GoudenMunt(700, 2594, 1);
+        Collectable.goudenMunten.add(gMunt2);
+        GoudenMunt gMunt3 = new GoudenMunt(800, 2594, 1);
+        Collectable.goudenMunten.add(gMunt3);
+        GoudenMunt gMunt4 = new GoudenMunt(1000, 2594, 1);
+        Collectable.goudenMunten.add(gMunt4);
         
-        GoudenMunt munt2 = new GoudenMunt(500, 2650, 1, 'g');
-        Collectable.goudenMunten.add(munt2);
     }
 }

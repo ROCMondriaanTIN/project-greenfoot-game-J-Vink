@@ -90,7 +90,6 @@ public class Wereld_1 extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 154, 2594);
-        addObject(new Enemy(), 404, 2205);
         
         // Collectables
         voegCollectablesToe();
@@ -105,19 +104,6 @@ public class Wereld_1 extends World {
     }
     
     public void voegCollectablesToe(){
-        for(int i = 0; i < Collectable.wereld1.size(); i++){
-                addObject(new Diamant(), Collectable.wereld1.get(i).diaX, Collectable.wereld1.get(i).diaY);
-        }
-        for(int i = 0; i < Collectable.zilverenMunt.size(); i++){
-            if(Collectable.goudenMunt.get(i).wereld == Hero.wereld){
-                addObject(new ZilverenMunt(), Collectable.zilverenMunt.get(i).muntX, Collectable.zilverenMunt.get(i).muntY);
-            }
-        }
-        /*for(int i = 0; i < Collectable.goudenMunt.size(); i++){
-            if(Collectable.goudenMunt.get(i).wereld == Hero.wereld){
-                addObject(new GoudenMunt(), Collectable.goudenMunt.get(i).muntX, Collectable.goudenMunt.get(i).muntY);
-            }
-        }*/
         for(int i = 0; i < Collectable.goudenMunten.size(); i++){
             if(Collectable.goudenMunten.get(i).wereld == Hero.wereld){
                 addObject(Collectable.goudenMunten.get(i), Collectable.goudenMunten.get(i).muntX, Collectable.goudenMunten.get(i).muntY);
