@@ -36,6 +36,7 @@ public class GoudenMunt extends Collectable
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
                 Munt munt = new Munt('g');
+                Hud.type='g';
                 
                 Hero.munten++;
                 Hero.muntWaarde+=2;

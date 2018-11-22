@@ -103,7 +103,6 @@ public class Hero extends Mover {
     
     boolean opGrond(){
         Actor onder = getOneObjectAtOffset(0, getImage().getHeight()/2, Tile.class);
-        //boolean test = onder.getIsSolid();
         Tile tile = (Tile) onder;
         if(tile != null) {
             if(tile.isSolid){

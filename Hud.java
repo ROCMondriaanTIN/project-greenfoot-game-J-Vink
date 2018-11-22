@@ -20,18 +20,15 @@ public class Hud extends Actor
         }
         // Munten
         if(Hero.munten > Startscherm.hudMunten){
-            if(type == 'g'){
                 for(int i = 0; Startscherm.hudMunten < Hero.munten; i++){
-                    getWorld().addObject(new Munt('z'), (950-(10*Startscherm.hudMunten)), 50);
+                    if(type == 'g'){
+                        getWorld().addObject(new Munt('g'), (950-(10*Startscherm.hudMunten)), 50);
+                    }
+                    if(type == 'z'){
+                        getWorld().addObject(new Munt('z'), (950-(10*Startscherm.hudMunten)), 50);
+                    }
                     Startscherm.hudMunten++;
                 }
-            }
-            else{
-                for(int i = 0; Startscherm.hudMunten < Hero.munten; i++){
-                    getWorld().addObject(new Munt('g'), (950-(10*Startscherm.hudMunten)), 50);
-                    Startscherm.hudMunten++;
-                }
-            }
         }
         // Reset munten in HUD wanneer er 40 muntjes zijn verzameld.
         if(Hero.muntWaarde >= 40){

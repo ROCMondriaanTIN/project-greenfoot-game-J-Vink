@@ -35,12 +35,30 @@ public class Transitiescherm extends World
     void voegMuntenToe(){
         GoudenMunt gMunt1 = new GoudenMunt(500, 2594, 1);
         Collectable.goudenMunten.add(gMunt1);
-        GoudenMunt gMunt2 = new GoudenMunt(700, 2594, 1);
+        GoudenMunt gMunt2 = new GoudenMunt(500, 2594, 1);
         Collectable.goudenMunten.add(gMunt2);
-        GoudenMunt gMunt3 = new GoudenMunt(800, 2594, 1);
+        GoudenMunt gMunt3 = new GoudenMunt(500, 2594, 1);
         Collectable.goudenMunten.add(gMunt3);
-        GoudenMunt gMunt4 = new GoudenMunt(1000, 2594, 1);
+        GoudenMunt gMunt4 = new GoudenMunt(500, 2594, 1);
         Collectable.goudenMunten.add(gMunt4);
+        GoudenMunt gMunt5 = new GoudenMunt(500, 2594, 1);
+        Collectable.goudenMunten.add(gMunt5);
+        GoudenMunt gMunt6 = new GoudenMunt(500, 2594, 1);
+        Collectable.goudenMunten.add(gMunt6);
+        GoudenMunt gMunt7 = new GoudenMunt(500, 2594, 1);
+        Collectable.goudenMunten.add(gMunt7);
+        GoudenMunt gMunt8 = new GoudenMunt(500, 2594, 1);
+        Collectable.goudenMunten.add(gMunt8);
+        GoudenMunt gMunt9 = new GoudenMunt(500, 2594, 1);
+        Collectable.goudenMunten.add(gMunt9);
+        GoudenMunt gMunt10 = new GoudenMunt(700, 2594, 1);
+        Collectable.goudenMunten.add(gMunt10);
+        GoudenMunt gMunt11 = new GoudenMunt(800, 2594, 1);
+        Collectable.goudenMunten.add(gMunt11);
+        GoudenMunt gMunt12 = new GoudenMunt(1000, 2594, 1);
+        Collectable.goudenMunten.add(gMunt12);
+        ZilverenMunt zMunt1 = new ZilverenMunt(900, 2594, 1);
+        Collectable.zilverenMunten.add(zMunt1);
         
     }
 }

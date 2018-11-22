@@ -109,6 +109,11 @@ public class Wereld_1 extends World {
                 addObject(Collectable.goudenMunten.get(i), Collectable.goudenMunten.get(i).muntX, Collectable.goudenMunten.get(i).muntY);
             }
         }
+        for(int i = 0; i < Collectable.zilverenMunten.size(); i++){
+            if(Collectable.zilverenMunten.get(i).wereld == Hero.wereld){
+                addObject(Collectable.zilverenMunten.get(i), Collectable.zilverenMunten.get(i).muntX, Collectable.zilverenMunten.get(i).muntY);
+            }
+        }
     }
 
         
