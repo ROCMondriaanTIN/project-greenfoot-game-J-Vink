@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Munt here.
  * 
@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Munt extends Hud
 {
-    
     String image;
     /**
      * Act - do whatever the Munt wants to do. This method is called whenever
@@ -16,11 +15,13 @@ public class Munt extends Hud
      */
     public void act(){
         
-    }    
-    public Munt(){
-        setImage("coinBronze.png");
     }
-    public Munt(int x, int y, int wereld, char type){
-        
+    public Munt(char type){
+        if(type == 'g'){
+            setImage("coinGold.png");
+        }
+        else{
+            setImage("coinSilver.png");
+        }
     }
 }

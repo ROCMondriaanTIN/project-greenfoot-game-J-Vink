@@ -24,6 +24,10 @@ public class GoudenMunt extends Collectable
         this.id = sID;
         sID++;
     }
+    public GoudenMunt(){
+        super();
+        setImage("coinGold.png");
+    }
 
     @Override
     public void act() {
@@ -31,6 +35,8 @@ public class GoudenMunt extends Collectable
         
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
+                Munt munt = new Munt('g');
+                
                 Hero.munten++;
                 Hero.muntWaarde+=2;
                 getWorld().removeObject(this);

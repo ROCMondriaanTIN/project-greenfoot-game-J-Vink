@@ -32,6 +32,7 @@ public class ZilverenMunt extends Collectable{
                 Hero.muntWaarde++;
                 getWorld().removeObject(this);
                 Collectable.goudenMunten.remove(id);
+                Hud.type = 'z';
                 break;
             }
         }
