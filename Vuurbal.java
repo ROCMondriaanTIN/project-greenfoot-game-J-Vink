@@ -1,19 +1,35 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+import greenfoot.*;
 
 /**
- * Write a description of class Vuurbal here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ *
+ * @author R. Springer
  */
-public class Vuurbal extends Mover
-{
-    /**
-     * Act - do whatever the Vuurbal wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+public class Vuurbal extends Mover {
+
+    private int walkRange;
+    private int xMin;
+    private int xMax;
+    private boolean firstAct;
+    private int speed;
+
+    public Vuurbal() {
+        super();
+        setImage("fireball.png");
+        firstAct = true;
+        speed = 1;
+    }
+
+    @Override
+    public void act() {
+        int x = getX();
+        int y = getY();
+        getImage().rotate(10);
+        applyVelocity();
+        
+        if(getOneObjectAtOffset(0, 0, Hero.class) != null)
+        {  
+            Hero.gaatAf();
+        }
+    }
 }

@@ -82,7 +82,10 @@ public class Wereld_1 extends World {
         // Declareren en initialiseren van een main karakter van het spel mijne heet Hero. Deze klasse 
         // moet de klasse Mover extenden voor de camera om te werken
         Hero hero = new Hero();
+        Vuurbal vuurbal = new Vuurbal();
         Hero.wereld = 1;
+        
+        
         
         // Laat de camera een object volgen. Die moet een Mover instatie zijn of een extentie hiervan.
         camera.follow(hero);
@@ -90,6 +93,7 @@ public class Wereld_1 extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 154, 2594);
+        addObject(vuurbal, 1103, 2534);
         
         // Collectables
         voegCollectablesToe();
