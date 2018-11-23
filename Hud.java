@@ -9,32 +9,41 @@ import java.util.ArrayList;
 public class Hud extends Actor
 {
     public static char type;
+    static ArrayList<Munt> munten = new ArrayList();
     public void update(){
         // HUD interface.
         // Heart
         if(Hero.levens > Startscherm.hudLevens){
-            for(int i = 0; i < Hero.levens; i++){
-                getWorld().addObject(new Heart(),(50+(60*i)), 50);
+            getWorld().removeObjects(getWorld().getObjects(Heart.class));
+            Startscherm.hudLevens = 0;
+            for(int i = 0; Startscherm.hudLevens < Hero.levens; i++){
+                getWorld().addObject(new Heart(),(50+(60*Startscherm.hudLevens)), 50);
                 Startscherm.hudLevens++;
             }
         }
         // Munten
-        if(Hero.munten > Startscherm.hudMunten){
+        /*if(Hero.munten > Startscherm.hudMunten){
                 for(int i = 0; Startscherm.hudMunten < Hero.munten; i++){
-                    if(type == 'g'){
+                    if(munten.get(munten.size()-1).type == 'g'){
                         getWorld().addObject(new Munt('g'), (950-(10*Startscherm.hudMunten)), 50);
                     }
-                    if(type == 'z'){
+                    else if(munten.get(munten.size()-1).type == 'z'){
                         getWorld().addObject(new Munt('z'), (950-(10*Startscherm.hudMunten)), 50);
                     }
                     Startscherm.hudMunten++;
                 }
+        }*/
+        if(Hero.munten > Startscherm.hudMunten){
+            getWorld().removeObjects(getWorld().getObjects(Munt.class));
+            Startscherm.hudMunten = 0;
+            for(int i = 0; i < munten.size(); i++){
+                getWorld().addObject(munten.get(i), (950-(10*i)), 50);
+            }
         }
         // Reset munten in HUD wanneer er 40 muntjes zijn verzameld.
-        if(Hero.muntWaarde >= 40){
-            Hero.munten = (Hero.munten-40);
-            Startscherm.hudMunten = 0;
-            Hero.muntWaarde = 0;
+        if(Hero.muntWaarde >= 20){
+            Hero.muntWaarde -= 20;
+            munten.clear();
             getWorld().removeObjects(getWorld().getObjects(Munt.class));
             Hero.levens++;
         }
@@ -46,6 +55,7 @@ public class Hud extends Actor
     public static void reset(){
         Startscherm.hudLevens = 0;
         Startscherm.hudMunten = 0;
+        munten.clear();
     }
     public void act() 
     {

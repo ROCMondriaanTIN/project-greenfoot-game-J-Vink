@@ -95,7 +95,7 @@ public class Wereld_1 extends World {
         voegCollectablesToe();
         
         addObject(new Hud(),-10,-10);
-        Hud.reset();
+        Startscherm.hudLevens = 0;
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
         // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
         ce = new CollisionEngine(te, camera);

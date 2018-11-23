@@ -33,6 +33,7 @@ public class Startscherm extends World{
         Hero.muntWaarde = 0;
         Hero.diamanten = 0;
         Hero.sleutels = 0;
+        Hud.reset();
     }
     
     void voegObjectenToe(){

@@ -8,7 +8,6 @@ import java.util.ArrayList;
  */
 public class Munt extends Hud
 {
-    static ArrayList<Munt> munten = new ArrayList();
     char type;
     /**
      * Act - do whatever the Munt wants to do. This method is called whenever

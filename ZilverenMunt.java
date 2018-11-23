@@ -29,7 +29,7 @@ public class ZilverenMunt extends Collectable{
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
                 Munt munt = new Munt('z');
-                Hud.type='z';
+                Hud.munten.add(munt);
                 Hero.munten++;
                 Hero.muntWaarde++;
                 getWorld().removeObject(this);
