@@ -113,12 +113,6 @@ public class Hero extends Mover {
                 velocityY = 15;
             }
         }
-        for (Actor slanted : getIntersectingObjects(SlantedL.class)) {
-            if((getOneObjectAtOffset(-90, 0, SlantedL.class) != null) || (slanted != null) && (Greenfoot.isKeyDown("left"))){
-                    velocityX = -1;
-                    velocityY = -1;
-            }
-        }
     }
     
     boolean opGrond(){
@@ -148,11 +142,6 @@ public class Hero extends Mover {
         if (Greenfoot.isKeyDown("left")) {
             if(opGrond() == true){
                 animation();
-                if(getOneObjectAtOffset(-1, 0, SlantedL.class) != null)
-                {  
-                    velocityX = -1;
-                    velocityY = -1;
-                }
             }
             velocityX = -10;
         } else if (Greenfoot.isKeyDown("right")) {
