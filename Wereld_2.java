@@ -8,7 +8,6 @@ import java.util.*;
  */
 public class Wereld_2 extends World {
     public static ArrayList<Collectable> collectables = new ArrayList<Collectable>();
-    public static ArrayList<Munt> muntjes = new ArrayList<Munt>();
     private CollisionEngine ce;
     
     /**

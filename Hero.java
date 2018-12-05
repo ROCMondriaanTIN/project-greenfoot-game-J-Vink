@@ -14,7 +14,7 @@ public class Hero extends Mover {
     protected static int muntWaarde;
     protected static int diamanten;
     public static int levens;
-    public static int sleutels;
+    public static boolean hasKey;
     GreenfootImage[] images = new GreenfootImage[11];
     int imageNumber;
 
@@ -24,6 +24,7 @@ public class Hero extends Mover {
         acc = 0.9;
         drag = 0.8;
         setImage("p" + karakter + ".png");
+        hasKey = false;
         
         for( int i=0; i<images.length; i++ ) images[i] = new GreenfootImage( "p" + karakter + "_walk" + (i+1) + ".png" );
         setImage( images[imageNumber] );

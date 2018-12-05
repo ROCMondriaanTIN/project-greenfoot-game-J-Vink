@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class KarakterTransitie extends Actor
 {
     private int karakter;
+    public static boolean karakterSelected;
     /**
      * Act - do whatever the KarakterTransitie wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,7 +22,7 @@ public class KarakterTransitie extends Actor
     public void click(){
         if(Greenfoot.mouseClicked(this)){
             Hero.karakter = this.karakter;
-            Greenfoot.setWorld(new Wereld_1());
+            karakterSelected = true;
         }
     }
     

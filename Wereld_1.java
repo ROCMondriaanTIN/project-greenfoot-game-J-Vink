@@ -64,6 +64,9 @@ public class Wereld_1 extends World {
                 
         };
         
+        Deur deur = new Deur();
+        addObject(deur, 7477,2070);
+        addObject(new Deurtop(), 7477,2000);
 
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         TileEngine te = new TileEngine(this, 60, 60, map);
@@ -85,8 +88,8 @@ public class Wereld_1 extends World {
         addObject(camera, 0, 0);
         addObject(hero, 154, 2100);
         addObject(vuurbal, 1103, 2534);
-        for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+30); i++){
-            addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(500)+500));
+        for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+100); i++){
+            addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
         }
         
         // Collectables
