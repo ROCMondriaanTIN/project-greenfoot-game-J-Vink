@@ -6,8 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Bridge extends Tile
-{
+public class Bridge extends Tile{
     private static int id;
     public Bridge(String image, int width, int heigth) {
         super(image, width, heigth);

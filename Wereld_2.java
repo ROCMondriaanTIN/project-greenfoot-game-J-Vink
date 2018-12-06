@@ -84,6 +84,7 @@ public class Wereld_2 extends World {
         addObject(camera, 0, 0);
         addObject(hero, 154, 2100);
         addObject(vuurbal, 1103, 2534);
+        addObject(new Platform("grass", 500), 2650, 1850);
         for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+10); i++){
             addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(500)+500));
         }
@@ -115,6 +116,11 @@ public class Wereld_2 extends World {
         for(int i = 0; i < Collectable.sleutels.size(); i++){
             if(Collectable.sleutels.get(i).wereld == Hero.wereld){
                 addObject(Collectable.sleutels.get(i), Collectable.sleutels.get(i).x, Collectable.sleutels.get(i).y);
+            }
+        }
+        for(int i = 0; i < Collectable.diamanten.size(); i++){
+            if(Collectable.diamanten.get(i).wereld == Hero.wereld){
+                addObject(Collectable.diamanten.get(i), Collectable.diamanten.get(i).diaX, Collectable.diamanten.get(i).diaY);
             }
         }
     }

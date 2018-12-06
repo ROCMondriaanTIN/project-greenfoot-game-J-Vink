@@ -92,13 +92,6 @@ public class Hero extends Mover {
         if (isVanScherm()){
           gaatAf();
         }
-        
-        for (Vuurbal enemy : getIntersectingObjects(Vuurbal.class)) {
-            if (enemy != null) {
-               gaatAf();
-            }
-        }
-        
         // Check of de speler nog levens over heeft.
         if(levens < 1){
             Greenfoot.setWorld(new GameOver());
@@ -107,14 +100,6 @@ public class Hero extends Mover {
             if ((rope != null) && (Greenfoot.isKeyDown("space"))) {
                 velocityY = -15;
                 break;
-            }
-            /*else if((rope != null) && (Greenfoot.isKeyDown("down"))){
-                velocityY = 15
-            }*/
-        }
-        for (Actor rope : getIntersectingObjects(Bridge.class)) {
-            if((rope != null) && (Greenfoot.isKeyDown("down"))){
-                velocityY = 15;
             }
         }
     }
