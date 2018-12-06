@@ -27,6 +27,24 @@ public class LevelNummer extends Actor
         if(Greenfoot.mouseClicked(this)){
             levelSelected = true;
             StartTransitie.level = this.level;
+            switch(this.level){
+                case 1:
+                    getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
+                    getWorld().addObject(new LevelOmlijning(), 300, 500);
+                    break;
+                case 2:
+                    getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
+                    getWorld().addObject(new LevelOmlijning(), 450, 500);
+                    break;
+                case 3:
+                    getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
+                    getWorld().addObject(new LevelOmlijning(), 600, 500);
+                    break;
+                case 4:
+                    getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
+                    getWorld().addObject(new LevelOmlijning(), 750, 500);
+                    break;
+                }
         }
     }
 }

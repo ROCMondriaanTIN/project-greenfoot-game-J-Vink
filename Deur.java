@@ -20,6 +20,9 @@ public class Deur extends Mover
         for (Hero hero : getIntersectingObjects(Hero.class)) {
             if ((hero != null) && (Hero.hasKey == true)) {
                 setImage("door_openMid.png");
+                if(Greenfoot.isKeyDown("down")){
+                    Greenfoot.setWorld(new Transitiescherm());
+                }
             }
         }
     }    

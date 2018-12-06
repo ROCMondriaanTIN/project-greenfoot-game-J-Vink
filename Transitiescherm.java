@@ -17,13 +17,14 @@ public class Transitiescherm extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1); 
         this.setBackground("bg.png");
-        addObject(new StartTransitie(), 500, 150);
+        addObject(new StartTransitie(), 500, 200);
         addObject(new KarakterTransitie(1), 400, 650);
         addObject(new KarakterTransitie(2), 500, 650);
         addObject(new KarakterTransitie(3), 600, 650);
-        addObject(new LevelNummer(1), 400, 500);
-        addObject(new LevelNummer(2), 500, 500);
+        addObject(new LevelNummer(1), 300, 500);
+        addObject(new LevelNummer(2), 450, 500);
         addObject(new LevelNummer(3), 600, 500);
+        addObject(new LevelNummer(4), 750, 500);
         resetMunten();
         voegMuntenToe();
         LevelNummer.levelSelected = false;

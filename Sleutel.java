@@ -1,19 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Sleutel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Sleutel extends Mover
+import java.util.ArrayList;
+public class Sleutel extends Collectable
 {
-    /**
-     * Act - do whatever the Sleutel wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public int wereld;
+    public int x;
+    public int y;
+    public Sleutel(int i, int wereld, int x, int y){
+        setImage("key" + i + ".png");
+        this.wereld = wereld;
+        this.x = x;
+        this.y = y;
+    }
     public void act() 
     {
-        // Add your action code here.
+        applyVelocity();
+        for (Hero hero : getIntersectingObjects(Hero.class)) {
+            if (hero != null) {
+                getWorld().removeObject(this);
+                Hero.hasKey = true;
+            }
+        }
     }    
 }

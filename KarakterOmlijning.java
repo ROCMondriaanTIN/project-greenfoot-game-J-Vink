@@ -6,9 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Omlijning extends Actor
+public class KarakterOmlijning extends Actor
 {
-    public Omlijning(){
+    public KarakterOmlijning(){
         setImage("circle.png");
     }
     public void act() 

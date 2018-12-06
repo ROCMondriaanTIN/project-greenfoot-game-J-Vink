@@ -25,16 +25,16 @@ public class KarakterTransitie extends Actor
             karakterSelected = true;
             switch(this.karakter){
                 case 1:
-                    getWorld().removeObjects(getWorld().getObjects(Omlijning.class));
-                    getWorld().addObject(new Omlijning(), 400, 652);
+                    getWorld().removeObjects(getWorld().getObjects(KarakterOmlijning.class));
+                    getWorld().addObject(new KarakterOmlijning(), 400, 652);
                     break;
                 case 2:
-                    getWorld().removeObjects(getWorld().getObjects(Omlijning.class));
-                    getWorld().addObject(new Omlijning(), 500, 652);
+                    getWorld().removeObjects(getWorld().getObjects(KarakterOmlijning.class));
+                    getWorld().addObject(new KarakterOmlijning(), 500, 652);
                     break;
                 case 3:
-                    getWorld().removeObjects(getWorld().getObjects(Omlijning.class));
-                    getWorld().addObject(new Omlijning(), 600, 652);
+                    getWorld().removeObjects(getWorld().getObjects(KarakterOmlijning.class));
+                    getWorld().addObject(new KarakterOmlijning(), 600, 652);
                     break;
             }
         }

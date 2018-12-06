@@ -1,8 +1,5 @@
 import greenfoot.*;
-/**
- *
- * @author R. Springer
- */
+
 public class Hero extends Mover {
 
     private final double gravity;
@@ -10,11 +7,13 @@ public class Hero extends Mover {
     private final double drag;
     protected static int karakter;
     public static int wereld = 1;
+    public static int sleutels;
     protected static int munten;
     protected static int muntWaarde;
     protected static int diamanten;
     public static int levens;
     public static boolean hasKey;
+    //Afbeeldingen voor loopanimatie.
     GreenfootImage[] images = new GreenfootImage[11];
     int imageNumber;
 
@@ -34,6 +33,7 @@ public class Hero extends Mover {
     
     public static void gaatAf(){
         levens--;
+        hasKey = false;
          switch(wereld){
               case 1:
               Greenfoot.setWorld(new Wereld_1());
