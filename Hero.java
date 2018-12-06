@@ -38,16 +38,15 @@ public class Hero extends Mover {
               case 1:
               Greenfoot.setWorld(new Wereld_1());
               break;
-              /*case 2:
+              case 2:
               Greenfoot.setWorld(new Wereld_2());
               break;
-              /* case 3:
-               * Greenfoot.setWorld(new Wereld_3());
-               * break;
-               * case 4:
-               * Greenfoot.setWorld(new Wereld_4());
-               * break; 
-               */
+              case 3:
+              Greenfoot.setWorld(new Wereld_3());
+              break;
+              case 4:
+              Greenfoot.setWorld(new Wereld_4());
+              break; 
         }
     }
     

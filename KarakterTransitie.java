@@ -23,6 +23,20 @@ public class KarakterTransitie extends Actor
         if(Greenfoot.mouseClicked(this)){
             Hero.karakter = this.karakter;
             karakterSelected = true;
+            switch(this.karakter){
+                case 1:
+                    getWorld().removeObjects(getWorld().getObjects(Omlijning.class));
+                    getWorld().addObject(new Omlijning(), 400, 652);
+                    break;
+                case 2:
+                    getWorld().removeObjects(getWorld().getObjects(Omlijning.class));
+                    getWorld().addObject(new Omlijning(), 500, 652);
+                    break;
+                case 3:
+                    getWorld().removeObjects(getWorld().getObjects(Omlijning.class));
+                    getWorld().addObject(new Omlijning(), 600, 652);
+                    break;
+            }
         }
     }
     

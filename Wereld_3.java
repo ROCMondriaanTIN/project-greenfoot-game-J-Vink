@@ -83,7 +83,7 @@ public class Wereld_3 extends World {
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
-        addObject(hero, 154, 2100);
+        addObject(hero, 154, 100);
         addObject(vuurbal, 1103, 2534);
         for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+10); i++){
             addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(500)+500));
