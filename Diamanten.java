@@ -9,6 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Diamanten extends Hud
 {
     public Diamanten(){
-        setImage("hud_gem_blue.png");
+        setImage(new GreenfootImage("X " + Hero.diamanten, 30, Color.WHITE, new Color(0, 0, 0, 0)));
     }
 }

@@ -18,10 +18,14 @@ public class Deur extends Mover
     {
         applyVelocity();
         for (Hero hero : getIntersectingObjects(Hero.class)) {
-            if ((hero != null) && (Hero.hasKey == true)) {
+            if ((hero != null) && (Hero.hasKey == true) || (Hero.sleutels >= Hero.wereld)) {
                 setImage("door_openMid.png");
                 if(Greenfoot.isKeyDown("down")){
                     Greenfoot.setWorld(new Transitiescherm());
+                    if(Hero.sleutels < Hero.wereld){
+                        hero.sleutels++;
+                    }
+                    Collectable.sleutels.remove(0);
                 }
             }
         }

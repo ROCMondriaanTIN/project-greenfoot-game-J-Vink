@@ -9,5 +9,6 @@ import java.util.ArrayList;
 public class Collectable extends Mover{
     public static ArrayList<GoudenMunt> goudenMunten = new ArrayList();
     public static ArrayList<ZilverenMunt> zilverenMunten = new ArrayList();
+    public static ArrayList<Diamant> diamanten = new ArrayList();
     public static ArrayList<Sleutel> sleutels = new ArrayList();
 }

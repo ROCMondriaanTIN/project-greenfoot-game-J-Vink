@@ -41,6 +41,9 @@ public class Hud extends Actor
             break;
         }
         }
+        //Diamanten
+            getWorld().removeObjects(getWorld().getObjects(Diamanten.class));
+            getWorld().addObject(new Diamanten(), 50, 100);
         // Munten
         /*if(Hero.munten > Startscherm.hudMunten){
                 for(int i = 0; Startscherm.hudMunten < Hero.munten; i++){

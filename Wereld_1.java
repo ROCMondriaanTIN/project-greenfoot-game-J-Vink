@@ -121,6 +121,11 @@ public class Wereld_1 extends World {
                 addObject(Collectable.sleutels.get(i), Collectable.sleutels.get(i).x, Collectable.sleutels.get(i).y);
             }
         }
+        for(int i = 0; i < Collectable.diamanten.size(); i++){
+            if(Collectable.diamanten.get(i).wereld == Hero.wereld){
+                addObject(Collectable.diamanten.get(i), Collectable.diamanten.get(i).diaX, Collectable.diamanten.get(i).diaY);
+            }
+        }
     }
 
         

@@ -25,24 +25,36 @@ public class LevelNummer extends Actor
     
     private void click(){
         if(Greenfoot.mouseClicked(this)){
-            levelSelected = true;
-            StartTransitie.level = this.level;
             switch(this.level){
                 case 1:
                     getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
                     getWorld().addObject(new LevelOmlijning(), 300, 500);
+                    LevelNummer.levelSelected = true;
+                    StartTransitie.level = this.level;
                     break;
                 case 2:
-                    getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
-                    getWorld().addObject(new LevelOmlijning(), 450, 500);
+                    if(Hero.sleutels >=1){
+                        getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
+                        getWorld().addObject(new LevelOmlijning(), 450, 500);
+                        LevelNummer.levelSelected = true;
+                        StartTransitie.level = this.level;
+                    }
                     break;
                 case 3:
-                    getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
-                    getWorld().addObject(new LevelOmlijning(), 600, 500);
+                    if(Hero.sleutels >=2){
+                        getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
+                        getWorld().addObject(new LevelOmlijning(), 600, 500);
+                        LevelNummer.levelSelected = true;
+                        StartTransitie.level = this.level;
+                    }
                     break;
                 case 4:
-                    getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
-                    getWorld().addObject(new LevelOmlijning(), 750, 500);
+                    if(Hero.sleutels >=3){
+                        getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
+                        getWorld().addObject(new LevelOmlijning(), 750, 500);
+                        LevelNummer.levelSelected = true;
+                        StartTransitie.level = this.level;
+                    }
                     break;
                 }
         }

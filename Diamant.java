@@ -7,14 +7,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Diamant extends Collectable
 {
+    public int wereld;
     public int diaX;
     public int diaY;
     public int id;
     public Diamant(){
         setImage("Diamond" + Greenfoot.getRandomNumber(3) + ".png");
     }
-    public Diamant(int x, int y) {
+    public Diamant(int wereld, int x, int y) {
         super();
+        setImage("Diamond" + Greenfoot.getRandomNumber(3) + ".png");
+        this.wereld = wereld;
         this.diaX = x;
         this.diaY = y;
     }
@@ -27,20 +30,7 @@ public class Diamant extends Collectable
             if (hero != null) {
                 Hero.diamanten++;
                 getWorld().removeObject(this);
-                    switch(Hero.wereld){
-                     case 1:
-                     //Collectable.wereld1.remove(id);
-                     break;
-                     //case 2:
-                     //Collectable.wereld2.remove(id);
-                     //break;
-                     /*case 3:
-                     Collectable.wereld3.remove(id);
-                     break;
-                     case 4:
-                     Collectable.wereld4.remove(id);
-                     break; */
-                    }
+                Collectable.diamanten.remove(this);
                 break;
             }
         }
