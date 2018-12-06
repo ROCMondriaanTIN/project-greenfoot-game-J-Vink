@@ -18,6 +18,20 @@ public class Sleutel extends Collectable
             if (hero != null) {
                 getWorld().removeObject(this);
                 Hero.hasKey = true;
+                switch(Hero.wereld){
+                    case 1:
+                    Hud.key.setImage("hud_key1.png");
+                    break;
+                    case 2:
+                    Hud.key.setImage("hud_key2.png");
+                    break;
+                    case 3:
+                    Hud.key.setImage("hud_key3");
+                    break;
+                    case 4:
+                    Hud.key.setImage("hud_key0");
+                    break;
+                }
             }
         }
     }    

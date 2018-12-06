@@ -38,7 +38,7 @@ public class Startscherm extends World{
     void voegObjectenToe(){
         Collectable.sleutels.add(new Sleutel(0, 4, 300, 2050));
         Collectable.sleutels.add(new Sleutel(1, 1, 300, 2050));
-        Collectable.sleutels.add(new Sleutel(2, 2, 300, 2050));
+        Collectable.sleutels.add(new Sleutel(2, 2, 595, 2000));
         Collectable.sleutels.add(new Sleutel(3, 3, 300, 2050));
     }
     

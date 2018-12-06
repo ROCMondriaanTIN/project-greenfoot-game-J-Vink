@@ -27,6 +27,7 @@ public class Transitiescherm extends World
         addObject(new LevelNummer(4), 750, 500);
         resetMunten();
         voegMuntenToe();
+        Hero.hasKey = false;
         LevelNummer.levelSelected = false;
         KarakterTransitie.karakterSelected = false;
     }

@@ -10,6 +10,9 @@ public class Hud extends Actor
 {
     public static char type;
     static ArrayList<Munt> munten = new ArrayList();
+    
+    static Key key = new Key();
+    
     public void update(){
         // HUD interface.
         // Heart
@@ -20,6 +23,23 @@ public class Hud extends Actor
                 getWorld().addObject(new Heart(),(50+(60*Startscherm.hudLevens)), 50);
                 Startscherm.hudLevens++;
             }
+        }
+        //Sleutel
+        if(Hero.hasKey == false){
+        switch(Hero.wereld){
+            case 1:
+                key.setImage("hud_key1_disabled.png");
+            break;
+            case 2:
+                key.setImage("hud_key2_disabled.png");
+            break;
+            case 3:
+                key.setImage("hud_key3_disabled.png");
+            break;
+            case 4:
+                key.setImage("hud_key0_disabled.png");
+            break;
+        }
         }
         // Munten
         /*if(Hero.munten > Startscherm.hudMunten){

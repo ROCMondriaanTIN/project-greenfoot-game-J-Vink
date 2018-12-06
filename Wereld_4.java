@@ -93,6 +93,7 @@ public class Wereld_4 extends World {
         voegCollectablesToe();
         
         addObject(new Hud(),-10,-10);
+        addObject(Hud.key, 950, 100);
         Startscherm.hudLevens = 0;
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
         // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.
@@ -110,6 +111,11 @@ public class Wereld_4 extends World {
         for(int i = 0; i < Collectable.zilverenMunten.size(); i++){
             if(Collectable.zilverenMunten.get(i).wereld == Hero.wereld){
                 addObject(Collectable.zilverenMunten.get(i), Collectable.zilverenMunten.get(i).muntX, Collectable.zilverenMunten.get(i).muntY);
+            }
+        }
+        for(int i = 0; i < Collectable.sleutels.size(); i++){
+            if(Collectable.sleutels.get(i).wereld == Hero.wereld){
+                addObject(Collectable.sleutels.get(i), Collectable.sleutels.get(i).x, Collectable.sleutels.get(i).y);
             }
         }
     }

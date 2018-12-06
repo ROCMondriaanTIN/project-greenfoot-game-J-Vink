@@ -37,15 +37,19 @@ public class Hero extends Mover {
          switch(wereld){
               case 1:
               Greenfoot.setWorld(new Wereld_1());
+              Hud.key.setImage("hud_key1_disabled.png");
               break;
               case 2:
               Greenfoot.setWorld(new Wereld_2());
+              Hud.key.setImage("hud_key2_disabled.png");
               break;
               case 3:
               Greenfoot.setWorld(new Wereld_3());
+              Hud.key.setImage("hud_key3_disabled.png");
               break;
               case 4:
               Greenfoot.setWorld(new Wereld_4());
+              Hud.key.setImage("hud_key0_disabled.png");
               break; 
         }
     }
