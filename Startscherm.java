@@ -22,6 +22,7 @@ public class Startscherm extends World{
         addObject(start, 500, 650);
         reset();
         Hero.levens = 5;
+        Hero.wereld = 0;
         voegObjectenToe();
     }
     

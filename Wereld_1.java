@@ -76,7 +76,6 @@ public class Wereld_1 extends World {
         // Declareren en initialiseren van een main karakter van het spel mijne heet Hero. Deze klasse 
         // moet de klasse Mover extenden voor de camera om te werken
         Hero hero = new Hero();
-        Vuurbal vuurbal = new Vuurbal();
         Hero.wereld = 1;
         
         //5350 625
@@ -87,7 +86,8 @@ public class Wereld_1 extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 154, 2100);
-        addObject(vuurbal, 1103, 2534);
+        addObject(new Vuurbal(), 600, 2050);
+        addObject(new Vuurbal(), 2500, 2000);
         for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+100); i++){
             addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
         }

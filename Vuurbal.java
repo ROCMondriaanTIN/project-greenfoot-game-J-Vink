@@ -24,7 +24,7 @@ public class Vuurbal extends Mover {
     public void act() {
         int x = getX();
         int y = getY();
-        getImage().rotate(10);
+        turn(17);
         applyVelocity();
         
         if(getOneObjectAtOffset(0, 0, Hero.class) != null)
