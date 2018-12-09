@@ -38,6 +38,7 @@ public class ZilverenMunt extends Collectable{
                 getWorld().removeObject(this);
                 Collectable.zilverenMunten.remove(this);
                 Hud.update = true;
+                Collectable.coin.play();
                 break;
             }
         }

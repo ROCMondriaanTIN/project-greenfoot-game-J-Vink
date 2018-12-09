@@ -41,6 +41,7 @@ public class GoudenMunt extends Collectable
                 getWorld().removeObject(this);
                 Collectable.goudenMunten.remove(this);
                 Hud.update = true;
+                Collectable.coin.play();
                 break;
             }
         }
