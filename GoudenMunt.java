@@ -35,13 +35,12 @@ public class GoudenMunt extends Collectable
         
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
-                Munt munt = new Munt('g');
-                Hud.munten.add(munt);
-                
+                Hud.munten.add(new Munt('g'));
                 Hero.munten++;
                 Hero.muntWaarde+=2;
                 getWorld().removeObject(this);
                 Collectable.goudenMunten.remove(this);
+                Hud.update = true;
                 break;
             }
         }

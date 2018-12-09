@@ -64,6 +64,9 @@ public class Wereld_4 extends World {
                 
         };
         
+        for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+25); i++){
+            addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
+        }
 
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         TileEngine te = new TileEngine(this, 60, 60, map);

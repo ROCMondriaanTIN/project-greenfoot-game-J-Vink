@@ -23,7 +23,7 @@ public class Wolk extends Mover
         getImage().mirrorHorizontally();
         walkRange = 5000;
         firstAct = true;
-        speed = 1;
+        speed = Greenfoot.getRandomNumber(3)+1;
     }
     public void act() 
     {
@@ -32,8 +32,8 @@ public class Wolk extends Mover
 
         if (firstAct) {
             firstAct = false;
-            xMin = x - walkRange / 2;
-            xMax = x + walkRange / 2;
+            xMin = 0;
+            xMax = 7060;
         }
 
         velocityX = speed;
@@ -44,7 +44,7 @@ public class Wolk extends Mover
             getImage().mirrorHorizontally();
         } else if (getX() <= xMin) {
             speed *= -1;
-            x = 7460;
+            x = xMin;
             getImage().mirrorHorizontally();
         }
     }    

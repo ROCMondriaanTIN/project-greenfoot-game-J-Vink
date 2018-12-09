@@ -64,6 +64,9 @@ public class Wereld_2 extends World {
         };
         
 
+        for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+25); i++){
+            addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
+        }
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         TileEngine te = new TileEngine(this, 60, 60, map);
         // Declarenre en initialiseren van de camera klasse met de TileEngine klasse 
@@ -84,7 +87,7 @@ public class Wereld_2 extends World {
         addObject(camera, 0, 0);
         addObject(hero, 154, 2100);
         addObject(vuurbal, 1103, 2534);
-        addObject(new Platform("grass", 500), 2650, 1850);
+        addObject(new Platform(false), 6460, 1815 );
         for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+10); i++){
             addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(500)+500));
         }

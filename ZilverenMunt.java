@@ -12,6 +12,10 @@ public class ZilverenMunt extends Collectable{
     public int wereld;
     public int id;
     public static int sID;
+    
+    public ZilverenMunt(){
+        setImage("coinSilver.png");
+    }
     public ZilverenMunt(int x, int y, int wereld) {
         super();
         setImage("coinSilver.png");
@@ -28,12 +32,12 @@ public class ZilverenMunt extends Collectable{
         
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
-                Munt munt = new Munt('z');
-                Hud.munten.add(munt);
+                Hud.munten.add(new Munt('z'));
                 Hero.munten++;
                 Hero.muntWaarde++;
                 getWorld().removeObject(this);
                 Collectable.zilverenMunten.remove(this);
+                Hud.update = true;
                 break;
             }
         }

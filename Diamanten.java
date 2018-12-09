@@ -8,7 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Diamanten extends Hud
 {
+    public static boolean update;
     public Diamanten(){
         setImage(new GreenfootImage("X " + Hero.diamanten, 30, Color.WHITE, new Color(0, 0, 0, 0)));
+    }
+    void updateDiamanten(){
+        setImage(new GreenfootImage("X " + Hero.diamanten, 30, Color.WHITE, new Color(0, 0, 0, 0)));
+        update = false;
+    }
+    
+    public void act(){
+        if(update) updateDiamanten();
     }
 }

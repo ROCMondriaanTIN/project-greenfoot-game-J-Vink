@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LevelOmlijning extends Actor
 {
     public LevelOmlijning(){
-        setImage("circle.png");
+        setImage("Circle_100.png");
     }
     public void act() 
     {

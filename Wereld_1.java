@@ -67,6 +67,11 @@ public class Wereld_1 extends World {
         Deur deur = new Deur();
         addObject(deur, 7477,2070);
         addObject(new Deurtop(), 7477,2000);
+        
+        
+        for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+25); i++){
+            addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
+        }
 
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         TileEngine te = new TileEngine(this, 60, 60, map);
@@ -86,9 +91,10 @@ public class Wereld_1 extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 154, 2100);
+        addObject(new Enemy(100, true), 5875, 2075);
         addObject(new Vuurbal(), 600, 2050);
         addObject(new Vuurbal(), 2500, 2000);
-        for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+100); i++){
+        for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+25); i++){
             addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
         }
         
@@ -103,6 +109,7 @@ public class Wereld_1 extends World {
         ce = new CollisionEngine(te, camera);
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
+        
     }
     
     public void voegCollectablesToe(){

@@ -9,21 +9,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Startscherm extends World{
         public static int hudLevens;
         public static int hudMunten;
+        public static boolean uitleg;
     /**
      * Constructor for objects of class Startscherm.
      * 
      */
+    Uitleg uitlegObj = new Uitleg();
     public Startscherm()
     {    
         // Create a new world with 1000*800 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1); 
         this.setBackground("bg_blender.jpg");
         Start start = new Start();
-        addObject(start, 500, 650);
+        addObject(start, 500, 600);
         reset();
         Hero.levens = 5;
         Hero.wereld = 0;
         voegObjectenToe();
+        
+        addObject(uitlegObj, 500, 250);
     }
     
     public static void reset(){
@@ -38,7 +42,7 @@ public class Startscherm extends World{
     
     void voegObjectenToe(){
         Collectable.diamanten.add(new Diamant(1, 300, 2050));
-        Collectable.sleutels.add(new Sleutel(1, 1, 300, 2050));
+        Collectable.sleutels.add(new Sleutel(1, 1, 5720, 1700));
         Collectable.sleutels.add(new Sleutel(2, 2, 595, 2000));
         Collectable.sleutels.add(new Sleutel(3, 3, 300, 2050));
         Collectable.sleutels.add(new Sleutel(0, 4, 300, 2050));

@@ -12,14 +12,17 @@ public class Enemy extends Mover {
     private int xMax;
     private boolean firstAct;
     private int speed;
+    private boolean dropsCoin;
+    public static GreenfootSound splat = new GreenfootSound("Splat.wav");
 
-    public Enemy() {
+    public Enemy(int walkRange, boolean dropsCoin) {
         super();
         setImage("snailWalk1.png");
         getImage().mirrorHorizontally();
-        walkRange = 140;
+        this.walkRange = walkRange;
         firstAct = true;
         speed = 1;
+        this.dropsCoin = dropsCoin;
     }
 
     @Override
@@ -47,7 +50,9 @@ public class Enemy extends Mover {
         
         if (getOneObjectAtOffset(0, -45, Hero.class) != null) 
         {      
-           getWorld().removeObject(this);  
+           if(this.dropsCoin) getWorld().addObject(new ZilverenMunt(), getX(), getY());
+           getWorld().removeObject(this);
+           splat.play();
         }     
         else if(getOneObjectAtOffset(-19, 10, Hero.class) != null || getOneObjectAtOffset(19, 10, Hero.class) != null )
         {  

@@ -31,6 +31,7 @@ public class Diamant extends Collectable
                 Hero.diamanten++;
                 getWorld().removeObject(this);
                 Collectable.diamanten.remove(this);
+                Hud.update = true;
                 break;
             }
         }

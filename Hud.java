@@ -12,20 +12,51 @@ public class Hud extends Actor
     static ArrayList<Munt> munten = new ArrayList();
     
     static Key key = new Key();
+    public static boolean firstStart;
+    public static boolean update;
     
     public void update(){
         // HUD interface.
+        if(Hero.munten > Startscherm.hudMunten){
+                getWorld().addObject(munten.get(Startscherm.hudMunten), (900-(10*Startscherm.hudMunten)), 48);
+                Startscherm.hudMunten++;
+        }
+        // Reset munten in HUD wanneer er 40 muntjes zijn verzameld.
+        if(Hero.muntWaarde >= 20){
+            Hero.muntWaarde -= 20;
+            munten.clear();
+            getWorld().removeObjects(getWorld().getObjects(Munt.class));
+            Hero.levens++;
+        }
         // Heart
         if(Hero.levens > Startscherm.hudLevens){
-            getWorld().removeObjects(getWorld().getObjects(Heart.class));
-            Startscherm.hudLevens = 0;
-            for(int i = 0; Startscherm.hudLevens < Hero.levens; i++){
-                getWorld().addObject(new Heart(),(50+(60*Startscherm.hudLevens)), 50);
+                getWorld().addObject(new Heart(),(50+(60*Hero.levens)), 50);
                 Startscherm.hudLevens++;
-            }
         }
-        //Sleutel
-        if(Hero.hasKey == false){
+        //Diamanten
+        Diamanten.update = true;
+            
+        update = false;
+    }
+    
+    public static void reset(){
+        Startscherm.hudLevens = 0;
+        Startscherm.hudMunten = 0;
+        munten.clear();
+    }
+    
+    void setup(){
+        firstStart = false;
+        getWorld().addObject(new Window(11, 165 , 60), 110, 125);
+        getWorld().addObject(new Diamanten(), 110, 125);
+        getWorld().addObject(new DiamantImg(), 57, 125);
+        
+        // Heart
+        while(Startscherm.hudLevens < Hero.levens){
+            getWorld().addObject(new Heart(),(50+(60*Startscherm.hudLevens)), 50);
+            Startscherm.hudLevens++;
+        }
+        
         switch(Hero.wereld){
             case 1:
                 key.setImage("hud_key1_disabled.png");
@@ -40,49 +71,20 @@ public class Hud extends Actor
                 key.setImage("hud_key0_disabled.png");
             break;
         }
-        }
-        //Diamanten
-            getWorld().removeObjects(getWorld().getObjects(Diamanten.class));
-            getWorld().addObject(new Diamanten(), 50, 100);
-        // Munten
-        /*if(Hero.munten > Startscherm.hudMunten){
-                for(int i = 0; Startscherm.hudMunten < Hero.munten; i++){
-                    if(munten.get(munten.size()-1).type == 'g'){
-                        getWorld().addObject(new Munt('g'), (950-(10*Startscherm.hudMunten)), 50);
-                    }
-                    else if(munten.get(munten.size()-1).type == 'z'){
-                        getWorld().addObject(new Munt('z'), (950-(10*Startscherm.hudMunten)), 50);
-                    }
-                    Startscherm.hudMunten++;
-                }
-        }*/
-        if(Hero.munten > Startscherm.hudMunten){
-            getWorld().removeObjects(getWorld().getObjects(Munt.class));
-            Startscherm.hudMunten = 0;
-            for(int i = 0; i < munten.size(); i++){
-                getWorld().addObject(munten.get(i), (950-(10*i)), 50);
-            }
-        }
-        // Reset munten in HUD wanneer er 40 muntjes zijn verzameld.
-        if(Hero.muntWaarde >= 20){
-            Hero.muntWaarde -= 20;
-            munten.clear();
-            getWorld().removeObjects(getWorld().getObjects(Munt.class));
-            Hero.levens++;
+        getWorld().addObject(new Window(55, 253, 60), 850, 50);
+        getWorld().addObject(new Munt('g'), 948, 48);
+        Startscherm.hudMunten=0;
+        while(Startscherm.hudMunten < munten.size()){
+            getWorld().addObject(munten.get(Startscherm.hudMunten), (900-(10*Startscherm.hudMunten)), 48);
+            Startscherm.hudMunten++;
         }
         
-        //Diamanten
-        //addObject(new Diamanten(), 50, 110);
     }
     
-    public static void reset(){
-        Startscherm.hudLevens = 0;
-        Startscherm.hudMunten = 0;
-        munten.clear();
-    }
     public void act() 
     {
-        update();
+        if(firstStart == true) {setup();}
+        if(update == true) {update();}
     }  
 
 }

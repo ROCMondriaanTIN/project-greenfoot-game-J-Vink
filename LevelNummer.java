@@ -28,14 +28,14 @@ public class LevelNummer extends Actor
             switch(this.level){
                 case 1:
                     getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
-                    getWorld().addObject(new LevelOmlijning(), 300, 500);
+                    getWorld().addObject(new LevelOmlijning(), 702, 435);
                     LevelNummer.levelSelected = true;
                     StartTransitie.level = this.level;
                     break;
                 case 2:
                     if(Hero.sleutels >=1){
                         getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
-                        getWorld().addObject(new LevelOmlijning(), 450, 500);
+                        getWorld().addObject(new LevelOmlijning(), 702, 515);
                         LevelNummer.levelSelected = true;
                         StartTransitie.level = this.level;
                     }
@@ -43,7 +43,7 @@ public class LevelNummer extends Actor
                 case 3:
                     if(Hero.sleutels >=2){
                         getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
-                        getWorld().addObject(new LevelOmlijning(), 600, 500);
+                        getWorld().addObject(new LevelOmlijning(), 702, 595);
                         LevelNummer.levelSelected = true;
                         StartTransitie.level = this.level;
                     }
@@ -51,7 +51,7 @@ public class LevelNummer extends Actor
                 case 4:
                     if(Hero.sleutels >=3){
                         getWorld().removeObjects(getWorld().getObjects(LevelOmlijning.class));
-                        getWorld().addObject(new LevelOmlijning(), 750, 500);
+                        getWorld().addObject(new LevelOmlijning(), 702, 675);
                         LevelNummer.levelSelected = true;
                         StartTransitie.level = this.level;
                     }
