@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -8,6 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Deur extends Mover
 {
+    GreenfootSound unlock = new GreenfootSound("Door.mp3");
+    GreenfootSound completed = new GreenfootSound("Level completed.mp3");
+    boolean firstUnlock = true;
     public Deur(){
         setImage("door_closedMid.png");
     }
@@ -20,11 +24,15 @@ public class Deur extends Mover
         for (Hero hero : getIntersectingObjects(Hero.class)) {
             if ((hero != null) && (Hero.hasKey == true) || (Hero.sleutels >= Hero.wereld)) {
                 setImage("door_openMid.png");
+                if(firstUnlock)unlock.play();
+                firstUnlock = false;
                 if(Greenfoot.isKeyDown("down")){
-                    Greenfoot.setWorld(new Transitiescherm());
+                    completed.play();
                     if(Hero.sleutels < Hero.wereld){
                         hero.sleutels++;
                     }
+                    Greenfoot.setWorld(new Transitiescherm());
+                    Hero.background.stop();
                     Collectable.sleutels.remove(0);
                 }
             }

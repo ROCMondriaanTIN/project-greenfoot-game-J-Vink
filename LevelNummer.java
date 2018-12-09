@@ -15,7 +15,11 @@ public class LevelNummer extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public LevelNummer(int nummer){
-        setImage("hud_" + nummer + ".png");
+        if(Hero.sleutels >= (nummer - 1)) setImage("hud_" + nummer + ".png");
+        else{
+            setImage("Button_13.png");
+            getImage().scale(75, 75);
+        }
         this.level = nummer;
     }
     public void act() 
