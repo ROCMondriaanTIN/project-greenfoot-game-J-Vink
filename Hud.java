@@ -30,7 +30,7 @@ public class Hud extends Actor
         }
         // Heart
         if(Hero.levens > Startscherm.hudLevens){
-                getWorld().addObject(new Heart(),(50+(60*Hero.levens)), 50);
+                getWorld().addObject(new Heart(),(50+(60*Startscherm.hudLevens)), 50);
                 Startscherm.hudLevens++;
         }
         //Diamanten
