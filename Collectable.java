@@ -12,4 +12,6 @@ public class Collectable extends Mover{
     public static ArrayList<Diamant> diamanten = new ArrayList();
     public static ArrayList<Sleutel> sleutels = new ArrayList();
     public static GreenfootSound coin = new GreenfootSound("Coin pickup.mp3");
+    public static GreenfootSound diamond = new GreenfootSound("Diamond.mp3");
+    public static GreenfootSound keys = new GreenfootSound("Keys.mp3");
 }

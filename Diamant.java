@@ -30,6 +30,7 @@ public class Diamant extends Collectable
             if (hero != null) {
                 Hero.diamanten++;
                 getWorld().removeObject(this);
+                Collectable.diamond.play();
                 Collectable.diamanten.remove(this);
                 Hud.update = true;
                 break;

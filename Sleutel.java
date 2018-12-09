@@ -17,6 +17,7 @@ public class Sleutel extends Collectable
         for (Hero hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
                 getWorld().removeObject(this);
+                Collectable.keys.play();
                 Hero.hasKey = true;
                 switch(Hero.wereld){
                     case 1:
