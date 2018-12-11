@@ -69,6 +69,7 @@ public class Wereld_1 extends World {
         addObject(new Deurtop(), 7477,2000);
         
         
+        removeObjects(getObjects(Wolk.class));
         for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+25); i++){
             addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
         }

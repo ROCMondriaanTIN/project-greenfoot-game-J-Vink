@@ -24,6 +24,7 @@ public class StartTransitie extends Actor
     
     private void click(){
         if((Greenfoot.mouseClicked(this))&&(LevelNummer.levelSelected == true)&&(KarakterTransitie.karakterSelected == true)){
+            Startscherm.intro.stop();
             switch(level){
                 case 1:
                 Greenfoot.setWorld(new Wereld_1());

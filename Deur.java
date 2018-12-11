@@ -31,7 +31,8 @@ public class Deur extends Mover
                     if(Hero.sleutels < Hero.wereld){
                         hero.sleutels++;
                     }
-                    Greenfoot.setWorld(new Transitiescherm());
+                    if(Hero.wereld == 4) Greenfoot.setWorld(new Uitgespeeld());
+                    else Greenfoot.setWorld(new Transitiescherm());
                     Hero.background.stop();
                     Collectable.sleutels.remove(0);
                 }

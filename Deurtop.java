@@ -18,7 +18,7 @@ public class Deurtop extends Mover
     {
         applyVelocity();
         for (Hero hero : getIntersectingObjects(Hero.class)) {
-            if ((hero != null) && (Hero.hasKey == true)) {
+            if ((hero != null) && (Hero.hasKey == true) || (Hero.sleutels >= Hero.wereld)) {
                 setImage("door_openTop.png");
             }
         }
