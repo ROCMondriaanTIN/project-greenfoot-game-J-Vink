@@ -46,7 +46,7 @@ public class Startscherm extends World{
         Collectable.diamanten.add(new Diamant(1, 300, 2050));
         Collectable.sleutels.add(new Sleutel(1, 1, 5720, 1700));
         Collectable.sleutels.add(new Sleutel(2, 2, 385, 554));
-        Collectable.sleutels.add(new Sleutel(3, 3, 154, 200));
+        Collectable.sleutels.add(new Sleutel(3, 3, 415, 554));
         Collectable.sleutels.add(new Sleutel(0, 4, 3685, 2054));
     }
     

@@ -28,6 +28,7 @@ public class Deur extends Mover
                 firstUnlock = false;
                 if(Greenfoot.isKeyDown("down")){
                     completed.play();
+                    cleanup();
                     if(Hero.sleutels < Hero.wereld){
                         hero.sleutels++;
                     }
@@ -39,4 +40,12 @@ public class Deur extends Mover
             }
         }
     }    
+    void cleanup(){
+        getWorld().removeObjects(getWorld().getObjects(Tile.class));
+        getWorld().removeObjects(getWorld().getObjects(Wolk.class));
+        getWorld().removeObjects(getWorld().getObjects(Camera.class));
+        getWorld().removeObjects(getWorld().getObjects(Hud.class));
+        getWorld().removeObjects(getWorld().getObjects(Hero.class));
+        
+    }
 }

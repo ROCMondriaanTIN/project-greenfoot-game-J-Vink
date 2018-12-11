@@ -27,10 +27,10 @@ public class Sleutel extends Collectable
                     Hud.key.setImage("hud_key2.png");
                     break;
                     case 3:
-                    Hud.key.setImage("hud_key3");
+                    Hud.key.setImage("hud_key3.png");
                     break;
                     case 4:
-                    Hud.key.setImage("hud_key0");
+                    Hud.key.setImage("hud_key0.png");
                     break;
                 }
             }

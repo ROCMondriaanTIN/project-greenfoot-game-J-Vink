@@ -65,7 +65,7 @@ public class Wereld_3 extends World {
         };
         
         
-        addObject(new Deur(), 154, 100);
+        addObject(new Deur(), 415, 554);
         
         removeObjects(getObjects(Wolk.class));
         for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+25); i++){
