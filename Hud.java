@@ -15,11 +15,11 @@ public class Hud extends Actor
     public static boolean firstStart;
     public static boolean update;
     
-    public void update(){
+    void update(){
         // HUD interface.
         if(Hero.munten > Startscherm.hudMunten){
-                getWorld().addObject(munten.get(Startscherm.hudMunten), (900-(10*Startscherm.hudMunten)), 48);
-                Startscherm.hudMunten++;
+            getWorld().addObject(munten.get(Startscherm.hudMunten), (900-(10*Startscherm.hudMunten)), 48);
+            Startscherm.hudMunten++;
         }
         // Reset munten in HUD wanneer er 40 muntjes zijn verzameld.
         if(Hero.muntWaarde >= 20){
@@ -30,8 +30,8 @@ public class Hud extends Actor
         }
         // Heart
         if(Hero.levens > Startscherm.hudLevens){
-                getWorld().addObject(new Heart(),(50+(60*Startscherm.hudLevens)), 50);
-                Startscherm.hudLevens++;
+            getWorld().addObject(new Heart(),(50+(60*Startscherm.hudLevens)), 50);
+            Startscherm.hudLevens++;
         }
         //Diamanten
         Diamanten.update = true;
