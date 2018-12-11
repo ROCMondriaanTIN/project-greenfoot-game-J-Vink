@@ -20,7 +20,6 @@ public class Uitleg extends Actor
             this.setLocation(500, 250);
             setImage("Window_12.png");
             getImage().scale(617, 472);
-            getWorld().addObject(new Tekst(), 750, 300);
         }
     }
     public void extend(){
