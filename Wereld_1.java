@@ -92,9 +92,12 @@ public class Wereld_1 extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 154, 2100);
-        addObject(new Enemy(100, true), 5875, 2075);
+        addObject(new Enemy(100, true), 5875, 2090);
+        addObject(new Enemy(140, false), 5170, 885);
+        addObject(new Enemy(140, false), 6910, 1370);
         addObject(new Vuurbal(), 600, 2050);
         addObject(new Vuurbal(), 2500, 2000);
+        addObject(new Vuurbal(), 4100, 1900);
         for(int i = 0; i <= (Greenfoot.getRandomNumber(20)+25); i++){
             addObject(new Wolk(), Greenfoot.getRandomNumber(7470), (Greenfoot.getRandomNumber(800)+100));
         }
@@ -103,7 +106,7 @@ public class Wereld_1 extends World {
         voegCollectablesToe();
         
         addObject(new Hud(),-10,-10);
-        addObject(Hud.key, 950, 100);
+        addObject(Hud.key, 950, 125);
         Startscherm.hudLevens = 0;
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
         // De collision engine kijkt alleen naar de tiles die de variabele solid op true hebben staan.

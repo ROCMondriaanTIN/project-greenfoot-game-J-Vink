@@ -42,10 +42,27 @@ public class Transitiescherm extends World
     }
     
     void voegMuntenToe(){
-        GoudenMunt gMunt1 = new GoudenMunt(810, 1035, 1);
-        Collectable.goudenMunten.add(gMunt1);
-        ZilverenMunt zMunt1 = new ZilverenMunt(900, 2054, 1);
-        Collectable.zilverenMunten.add(zMunt1);
+        //Level 1:
+        new GoudenMunt(810, 1035, 1);
+        new ZilverenMunt(1710, 1095, 1);
+        new ZilverenMunt(900, 2000, 1);
+        new ZilverenMunt(5555, 1635, 1);
+        new ZilverenMunt(3580, 250, 4);
+        
+        //Level 2:
+        new GoudenMunt(4955, 640, 2);
+        new ZilverenMunt(3480, 435, 2);
+        new ZilverenMunt(1525, 545, 2);
+        
+        //Level 3:
+        new GoudenMunt(3995, 200, 3);
+        new ZilverenMunt(7235, 1275, 3);
+        
+        //Level 4:
+        new GoudenMunt(935, 375, 4);
+        new ZilverenMunt(395, 75, 4);
+        new ZilverenMunt(5400, 680, 4);
+        new ZilverenMunt(2125, 615, 4);
         
     }
 }

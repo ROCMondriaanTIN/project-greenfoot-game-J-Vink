@@ -9,11 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Knop extends Actor
 {
     boolean click;
+    int i;
     public Knop(int i, boolean click){
         if(i <10){
             setImage("Button_0" + i + ".png");
         }
         else setImage("Button_" + i + ".png");
+        this.i = i;
         this.click = click;
     }
     public void act() 
@@ -21,7 +23,8 @@ public class Knop extends Actor
         if (click) click();
     }    
     void click(){
-        if(Greenfoot.mouseClicked(this)){
+        if((this.i == 66) && (Greenfoot.mouseClicked(this))) Greenfoot.setWorld(new Transitiescherm());
+        else if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new Startscherm());
             GameOver.gameOver.stop();
         }

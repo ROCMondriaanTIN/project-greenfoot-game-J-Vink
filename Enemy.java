@@ -48,12 +48,11 @@ public class Enemy extends Mover {
             getImage().mirrorHorizontally();
         }
         
-        if (getOneObjectAtOffset(0, -45, Hero.class) != null) 
-        {      
-           if(this.dropsCoin) getWorld().addObject(new ZilverenMunt(), getX(), getY());
-           getWorld().removeObject(this);
+        if (getOneObjectAtOffset(-19, -45, Hero.class) != null || getOneObjectAtOffset(19, -45, Hero.class) != null) 
+        {  
+           getWorld().removeObject(this);  
            splat.play();
-        }     
+        } 
         else if(getOneObjectAtOffset(-19, 10, Hero.class) != null || getOneObjectAtOffset(19, 10, Hero.class) != null )
         {  
             Hero.gaatAf();

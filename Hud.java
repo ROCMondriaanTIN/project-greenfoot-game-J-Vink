@@ -26,6 +26,8 @@ public class Hud extends Actor
             Hero.muntWaarde -= 20;
             munten.clear();
             getWorld().removeObjects(getWorld().getObjects(Munt.class));
+            getWorld().addObject(new Munt('g'), 948, 48);
+            Startscherm.hudMunten = 0;
             Hero.levens++;
         }
         // Heart
@@ -35,7 +37,7 @@ public class Hud extends Actor
         }
         //Diamanten
         Diamanten.update = true;
-            
+        
         update = false;
     }
     
@@ -78,7 +80,6 @@ public class Hud extends Actor
             getWorld().addObject(munten.get(Startscherm.hudMunten), (900-(10*Startscherm.hudMunten)), 48);
             Startscherm.hudMunten++;
         }
-        
     }
     
     public void act() 

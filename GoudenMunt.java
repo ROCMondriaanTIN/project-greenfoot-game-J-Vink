@@ -13,16 +13,13 @@ public class GoudenMunt extends Collectable
     public int muntX;
     public int muntY;
     public int wereld;
-    public int id;
-    public static int sID;
     public GoudenMunt(int x, int y, int wereld) {
         super();
         setImage("coinGold.png");
         this.muntX = x;
         this.muntY = y;
         this.wereld = wereld;
-        this.id = sID;
-        sID++;
+        Collectable.goudenMunten.add(this);
     }
     public GoudenMunt(){
         super();

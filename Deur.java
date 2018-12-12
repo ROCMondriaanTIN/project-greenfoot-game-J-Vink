@@ -34,7 +34,7 @@ public class Deur extends Mover
                     }
                     if(Hero.wereld == 4) Greenfoot.setWorld(new Uitgespeeld());
                     else Greenfoot.setWorld(new Transitiescherm());
-                    Hero.background.stop();
+                    //Hero.background.stop();
                     Collectable.sleutels.remove(0);
                 }
             }
@@ -46,6 +46,5 @@ public class Deur extends Mover
         getWorld().removeObjects(getWorld().getObjects(Camera.class));
         getWorld().removeObjects(getWorld().getObjects(Hud.class));
         getWorld().removeObjects(getWorld().getObjects(Hero.class));
-        
     }
 }

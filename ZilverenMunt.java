@@ -10,8 +10,6 @@ public class ZilverenMunt extends Collectable{
     public int muntX;
     public int muntY;
     public int wereld;
-    public int id;
-    public static int sID;
     
     public ZilverenMunt(){
         setImage("coinSilver.png");
@@ -22,8 +20,7 @@ public class ZilverenMunt extends Collectable{
         this.muntX = x;
         this.muntY = y;
         this.wereld = wereld;
-        this.id = sID;
-        sID++;
+        Collectable.zilverenMunten.add(this);
     }
 
     @Override

@@ -17,7 +17,7 @@ public class Hero extends Mover {
     //Afbeeldingen voor loopanimatie.
     GreenfootImage[] images = new GreenfootImage[11];
     int imageNumber;
-    public static GreenfootSound background = new GreenfootSound("Call to Adventure.mp3");
+    //public static GreenfootSound background = new GreenfootSound("Call to Adventure.mp3");
     public static GreenfootSound gaatAf = new GreenfootSound("Oof.mp3");
 
     public Hero() {
@@ -33,12 +33,12 @@ public class Hero extends Mover {
         
         Hud.firstStart = true;
         
-        background.playLoop();
+        //background.playLoop();
     }
     
     public static void gaatAf(){
         levens--;
-        background.stop();
+        //background.stop();
         gaatAf.play();
         hasKey = false;
          switch(wereld){
@@ -101,7 +101,7 @@ public class Hero extends Mover {
         }
         // Check of de speler nog levens over heeft.
         if(levens < 1){
-            background.stop();
+            //background.stop();
             Greenfoot.setWorld(new GameOver());
         }
         for (Actor rope : getIntersectingObjects(Rope.class)) {

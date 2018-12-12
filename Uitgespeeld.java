@@ -15,7 +15,11 @@ public class Uitgespeeld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1); 
-        this.setBackground("bg.png");
+        this.setBackground("bg_blender.jpg");
+        addObject(new Treasure(), 500, 400);
+        addObject(new Knop(66, true), 900, 500);
+        addObject(new Knop(18, true), 900, 700);
+        addObject(new EindTekst(), 500, 100);
         //victory.playLoop();
     }
 }

@@ -15,7 +15,7 @@ public class Startscherm extends World{
      * 
      */
     Uitleg uitlegObj = new Uitleg();
-    static GreenfootSound intro = new GreenfootSound("Intro.mp3");
+    //static GreenfootSound intro = new GreenfootSound("Intro.mp3");
     public Startscherm()
     {    
         // Create a new world with 1000*800 cells with a cell size of 1x1 pixels.
@@ -27,7 +27,7 @@ public class Startscherm extends World{
         reset();
         voegObjectenToe();
         uitleg = false;
-        intro.playLoop();
+        //intro.playLoop();
     }
     
     public static void reset(){
@@ -43,11 +43,13 @@ public class Startscherm extends World{
     }
     
     void voegObjectenToe(){
-        Collectable.diamanten.add(new Diamant(1, 300, 2050));
+        Collectable.diamanten.add(new Diamant(4, 810, 1060));
+        Collectable.diamanten.add(new Diamant(1, 6035, 2135));
+        Collectable.diamanten.add(new Diamant(2, 2965, 375));
         Collectable.sleutels.add(new Sleutel(1, 1, 5720, 1700));
-        Collectable.sleutels.add(new Sleutel(2, 2, 385, 554));
-        Collectable.sleutels.add(new Sleutel(3, 3, 415, 554));
-        Collectable.sleutels.add(new Sleutel(0, 4, 3685, 2054));
+        Collectable.sleutels.add(new Sleutel(2, 2, 205, 615));
+        Collectable.sleutels.add(new Sleutel(3, 3, 3445, 1994));
+        Collectable.sleutels.add(new Sleutel(0, 4, 1333, 1300));
     }
     
     
